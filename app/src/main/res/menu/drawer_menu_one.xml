@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:showIn="navigation_view">
+
+    <item
+        android:id="@+id/nav_search"
+        android:icon="@drawable/ic_search_icon_colored"
+        android:title="Search" />
+    <item
+        android:id="@+id/nav_suggestion"
+        android:icon="@drawable/ic_user_icon_colored"
+        android:title="Suggestions" />
+    <item
+        android:id="@+id/nav_drawer_notification"
+        android:icon="@drawable/ic_notification_icon_colored"
+        android:title="Notification" />
+    <item
+        android:id="@+id/nav_find_owners"
+        android:icon="@drawable/ic_estate_owner_icon_colored"
+        android:title="Estate Owners" />
+    <item
+        android:id="@+id/nav_find_broker"
+        android:icon="@drawable/ic_brokers_icon_colored"
+        android:title="Brokers" />
+    <item
+        android:id="@+id/nav_real_state"
+        android:icon="@drawable/ic_real_state_icon_colored"
+        android:title="Real Estates" />
+    <item
+        android:id="@+id/nav_developers"
+        android:icon="@drawable/ic_developer_icon_color"
+        android:title="Developers" />
+    <item
+        android:id="@+id/nav_find_property"
+        android:icon="@drawable/ic_find_property_icon_colored"
+        android:title="Find Property" />
+    <item
+        android:id="@+id/nav_invite_broker"
+        android:icon="@mipmap/inviteicon"
+        android:title="Invite Broker" />
+    <item
+        android:id="@+id/nav_projects"
+        android:icon="@drawable/ic_project_icon_colored"
+        android:title="Projects" />
+    <item
+        android:id="@+id/nav_favorite"
+        android:icon="@drawable/ic_favorite_icon_colored"
+        android:title="Favorite" />
+    <item
+        android:id="@+id/nav_newsandinfo"
+        android:icon="@drawable/ic_news_icon_colored"
+        android:title="New &amp; Info" />
+    <item
+        android:id="@+id/nav_find_user"
+        android:icon="@drawable/ic_user_icon_colored"
+        android:title="Users" />
+    <item
+        android:id="@+id/nav_maps"
+        android:icon="@drawable/ic_map_icon_colored"
+        android:title="Maps" />
+    <item
+        android:id="@+id/nav_setting"
+        android:icon="@drawable/ic_setting_icon_colored"
+        android:title="Setting" />
+    <item
+        android:id="@+id/text_color"
+        android:title="Dashboard One Styles"
+        app:showAsAction="always|withText"
+        android:icon="@drawable/home_selector_icon"
+        android:orderInCategory="1">
+        <!-- Starting the text color sub menu which have three items-->
+        <menu>
+            <item
+                android:id="@+id/dashboard_one"
+                android:title="Style One"
+                android:icon="@drawable/ic_home_icon" />
+            <item
+                android:id="@+id/dashboard_two"
+                android:title="Style Two"
+                android:icon="@drawable/ic_home_icon" />
+            <item
+                android:id="@+id/dashboard_three"
+                android:title="Style Three"
+                android:icon="@drawable/ic_home_icon" />
+            <item
+                android:id="@+id/dashboard_four"
+                android:title="Style Four"
+                android:icon="@drawable/ic_home_icon" />
+            <item
+                android:id="@+id/dashboard_five"
+                android:title="Style Five"
+                android:icon="@drawable/ic_home_icon" />
+            <item
+                android:id="@+id/dashboard_six"
+                android:title="Style Six"
+                android:icon="@drawable/ic_home_icon" />
+        </menu>
+    </item>
+    <item
+        android:id="@+id/dashboard_style_one"
+        android:icon="@drawable/ic_home_icon"
+        android:title="Dashboard One" />
+
+    <item
+        android:id="@+id/dashboard_style_two"
+        android:icon="@drawable/ic_home_icon"
+        android:title="Dashboard Two" />
+
+</menu>

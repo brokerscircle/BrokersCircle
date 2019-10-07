@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/forsale_tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        app:tabInlineLabel="true"
+        app:tabSelectedTextColor="@color/colorWhite"
+        app:tabIndicatorColor="@color/searchiconbackground"
+        app:tabBackground="@drawable/tab_color_selector"
+        app:tabMode="fixed"
+        app:tabGravity="fill">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_home_forsale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Home" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_plot_forsale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Plot" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_commercial_forsale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Commercial" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.nex3z.togglebuttongroup.SingleSelectToggleGroup
+            android:id="@+id/choices_home_categories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tbgFlow="true"
+            app:tbgChildSpacing="10dp"
+            app:tbgChildSpacingForLastRow="align"
+            app:tbgRowSpacing="10dp">
+
+            <!--<com.nex3z.togglebuttongroup.button.LabelToggle-->
+                <!--android:id="@+id/choice_house"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="25dp"-->
+                <!--android:text="House"/>-->
+
+            <!--<com.nex3z.togglebuttongroup.button.LabelToggle-->
+                <!--android:id="@+id/choice_flat"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="25dp"-->
+                <!--android:text="Flat"/>-->
+
+            <!--<com.nex3z.togglebuttongroup.button.LabelToggle-->
+                <!--android:id="@+id/choice_upper_portion"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="25dp"-->
+                <!--android:text="Upper Portion"/>-->
+
+            <!--<com.nex3z.togglebuttongroup.button.LabelToggle-->
+                <!--android:id="@+id/choice_lower_portion"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="25dp"-->
+                <!--android:text="Lower Portion"/>-->
+
+            <!--<com.nex3z.togglebuttongroup.button.LabelToggle-->
+                <!--android:id="@+id/choice_farm_house"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="25dp"-->
+                <!--android:text="Farm House"/>-->
+
+            <!--<com.nex3z.togglebuttongroup.button.LabelToggle-->
+                <!--android:id="@+id/choice_room"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="25dp"-->
+                <!--android:text="Room"/>-->
+
+            <!--<com.nex3z.togglebuttongroup.button.LabelToggle-->
+                <!--android:id="@+id/choice_penthouse"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="25dp"-->
+                <!--android:text="Pent House"/>-->
+
+        </com.nex3z.togglebuttongroup.SingleSelectToggleGroup>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Title:"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="12sp"/>
+
+            <EditText
+                android:id="@+id/et_title"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/rectangleshape"
+                android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                android:layout_height="35dp"
+                android:fontFamily="@font/roboto_regular"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:inputType="text"
+                android:textSize="12sp"
+                android:hint="Enter title"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description:"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="12sp"/>
+
+            <EditText
+                android:id="@+id/et_description"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/rectangleshape"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="top"
+                android:lines="3"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="3dp"
+                android:textSize="12sp"
+                android:paddingBottom="3dp"
+                android:maxLength="200"
+                android:hint="Enter description"
+                android:inputType="textMultiLine"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:weightSum="1.0"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_weight="0.5"
+                android:orientation="vertical"
+                android:layout_marginEnd="5dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Area:"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textSize="12sp"/>
+
+                <LinearLayout
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/rectangleshape"
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_height="35dp">
+
+                    <Spinner
+                        android:id="@+id/area_spinner"
+                        android:background="@drawable/spinner_background"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="0.5"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Unit:"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textSize="12sp"/>
+
+                <LinearLayout
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/rectangleshape"
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_height="35dp">
+
+                    <Spinner
+                        android:id="@+id/unit_spinner"
+                        android:background="@drawable/spinner_background"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.nex3z.togglebuttongroup.MultiSelectToggleGroup
+            android:id="@+id/choices_home_types"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tbgFlow="true"
+            app:tbgChildSpacing="10dp"
+            app:tbgChildSpacingForLastRow="align"
+            app:tbgRowSpacing="10dp">
+
+            <!--<com.nex3z.togglebuttongroup.button.LabelToggle-->
+            <!--android:id="@+id/choice_house"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="25dp"-->
+            <!--android:text="House"/>-->
+
+            <!--<com.nex3z.togglebuttongroup.button.LabelToggle-->
+            <!--android:id="@+id/choice_flat"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="25dp"-->
+            <!--android:text="Flat"/>-->
+
+            <!--<com.nex3z.togglebuttongroup.button.LabelToggle-->
+            <!--android:id="@+id/choice_upper_portion"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="25dp"-->
+            <!--android:text="Upper Portion"/>-->
+
+            <!--<com.nex3z.togglebuttongroup.button.LabelToggle-->
+            <!--android:id="@+id/choice_lower_portion"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="25dp"-->
+            <!--android:text="Lower Portion"/>-->
+
+            <!--<com.nex3z.togglebuttongroup.button.LabelToggle-->
+            <!--android:id="@+id/choice_farm_house"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="25dp"-->
+            <!--android:text="Farm House"/>-->
+
+            <!--<com.nex3z.togglebuttongroup.button.LabelToggle-->
+            <!--android:id="@+id/choice_room"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="25dp"-->
+            <!--android:text="Room"/>-->
+
+            <!--<com.nex3z.togglebuttongroup.button.LabelToggle-->
+            <!--android:id="@+id/choice_penthouse"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="25dp"-->
+            <!--android:text="Pent House"/>-->
+
+        </com.nex3z.togglebuttongroup.MultiSelectToggleGroup>
+
+    </LinearLayout>
+
+</LinearLayout>

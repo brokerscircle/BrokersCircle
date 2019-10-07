@@ -1,0 +1,708 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="brokerscirlce.com.Activities.Brokers.ViewAllBrokersActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        app:elevation="10dp"
+        android:backgroundTint="@color/colorGrey"
+        android:gravity="center"
+        android:layout_gravity="top"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_appbar_color">
+
+        <LinearLayout
+            android:weightSum="1.0"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:background="@color/bg_appbar_color"
+            android:layout_gravity="top"
+            android:layout_width="match_parent"
+            android:divider="@color/colorBlack"
+            android:layout_height="40dp">
+
+            <LinearLayout
+                android:id="@+id/btn_back"
+                android:layout_weight="0.12"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_arrow_back_black_24dp"
+                    android:tint="@color/appbar_actionicon_color"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="0.52"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/layout_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp">
+
+                    <EditText
+                        android:id="@+id/et_search"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingStart="45dp"
+                        android:background="@drawable/round_blue_border"
+                        android:gravity="center_vertical"
+                        android:fontFamily="@font/roboto_regular"
+                        android:hint="Search Broker"
+                        android:textSize="12sp"
+                        android:inputType="text"
+                        tools:ignore="HardcodedText,RtlSymmetry" />
+
+                    <LinearLayout
+                        android:background="@drawable/searchiconbackground"
+                        android:orientation="horizontal"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_width="35dp"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:visibility="visible"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:tint="@color/colorWhite"
+                            android:src="@drawable/ic_search_icon_colored"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="0.35"
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:layout_height="match_parent">
+
+                <ToggleButton
+                    android:id="@+id/btn_switch"
+                    android:layout_gravity="center"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/dashboard_two_layout_switcher"
+                    android:checked="false"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn=""/>
+
+                <ImageView
+                    android:id="@+id/btn_chat"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:scaleType="fitCenter"
+                    android:tint="@color/colorBlue"
+                    android:src="@drawable/ic_chat_icon"/>
+
+                <RelativeLayout
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/btn_profile"
+                        android:layout_centerInParent="true"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:scaleType="centerCrop"
+                        app:riv_corner_radius="5dp"
+                        app:riv_border_width="1dp"
+                        app:riv_border_color="@color/colorBlue"
+                        android:src="@drawable/ic_user_icon_colored"/>
+
+                    <ImageView
+                        android:id="@+id/user_online_icon"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true"
+                        android:padding="0dp"
+                        android:src="@drawable/greendot_icon"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:background="@color/colorBlack"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:id="@+id/layout_list"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmer_view_container"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <include layout="@layout/loading_user_circle_placeholder_layout" />
+                    <include layout="@layout/loading_user_circle_placeholder_layout" />
+                    <include layout="@layout/loading_user_circle_placeholder_layout" />
+                    <include layout="@layout/loading_user_circle_placeholder_layout" />
+                    <include layout="@layout/loading_user_circle_placeholder_layout" />
+                    <include layout="@layout/loading_user_circle_placeholder_layout" />
+                    <include layout="@layout/loading_user_circle_placeholder_layout" />
+                    <include layout="@layout/loading_user_circle_placeholder_layout" />
+                    <include layout="@layout/loading_user_circle_placeholder_layout" />
+                </LinearLayout>
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <com.baoyz.widget.PullRefreshLayout
+                android:id="@+id/swipeRefreshLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:refreshType="smartisan">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview"
+                    android:background="@color/colorGrey"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </com.baoyz.widget.PullRefreshLayout>
+
+        </LinearLayout>
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/layout_map"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:id="@+id/flMapContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <fragment
+                    android:id="@+id/map"
+                    class="brokerscirlce.com.Views.MapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <LinearLayout
+                    android:id="@+id/llMapActionContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <ToggleButton
+                        android:id="@+id/btn_draw"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/draw_background_selector"
+                        android:drawableTop="@drawable/ic_draw_icon"
+                        android:drawablePadding="0dp"
+                        android:paddingTop="5dp"
+                        android:textColor="@color/colorBlue"
+                        android:textSize="10dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:checked="false"
+                        android:text=""
+                        android:textOff="Draw"
+                        android:textOn="Clear"/>
+
+                </LinearLayout>
+
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/bottomsheetlayout"
+                android:orientation="vertical"
+                app:behavior_hideable="true"
+                app:behavior_peekHeight="300dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                app:layout_behavior="@string/bottom_sheet_behavior">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:background="@drawable/rectagle_blue_border"
+                    android:padding="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RelativeLayout
+                            android:id="@+id/layout"
+                            android:orientation="horizontal"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/profile_image"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:civ_border_width="1dp"
+                                app:civ_border_color="@color/colorBlue"
+                                android:src="@drawable/ic_user_icon_colored"/>
+
+                            <ImageView
+                                android:id="@+id/online_icon"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentEnd="true"
+                                android:src="@drawable/greendot_icon"/>
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_content"
+                            android:orientation="horizontal"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@+id/layout"
+                            android:weightSum="1.0"
+                            android:baselineAligned="false"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_marginStart="10dp"
+                                android:layout_weight="0.87"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/tv_name"
+                                    android:paddingTop="5dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:ellipsize="marquee"
+                                    android:text="Name"
+                                    android:singleLine="true"
+                                    android:fadingEdge="horizontal"
+                                    android:marqueeRepeatLimit="marquee_forever"
+                                    android:scrollHorizontally="true"
+                                    android:textColor="@color/colorBlack"
+                                    android:textAlignment="viewStart"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_estate"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:ellipsize="marquee"
+                                    android:singleLine="true"
+                                    android:text="Estate Name"
+                                    android:fadingEdge="horizontal"
+                                    android:marqueeRepeatLimit="marquee_forever"
+                                    android:scrollHorizontally="true"
+                                    android:textColor="@color/colorBlue"
+                                    android:textAlignment="viewStart"
+                                    android:textSize="14sp" />
+
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <RatingBar
+                                        android:id="@+id/rating"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        style="?android:attr/ratingBarStyleSmall"
+                                        android:numStars="5"
+                                        android:stepSize="0.1"
+                                        android:rating="3.5"
+                                        android:isIndicator="true" />
+
+                                    <TextView
+                                        android:id="@+id/tv_review"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="15dp"
+                                        android:fontFamily="@font/roboto_regular"
+                                        android:ellipsize="marquee"
+                                        android:singleLine="true"
+                                        android:text="12 Reviews"
+                                        android:fadingEdge="horizontal"
+                                        android:marqueeRepeatLimit="marquee_forever"
+                                        android:scrollHorizontally="true"
+                                        android:textAlignment="viewStart"
+                                        android:textSize="14sp" />
+
+                                </LinearLayout>
+
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="0.13"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content">
+
+                                <ToggleButton
+                                    android:id="@+id/btn_favorite"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:background="@drawable/favorite_selector"
+                                    android:checked="false"
+                                    android:text=""
+                                    android:textOff=""
+                                    android:textOn=""/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:weightSum="0.9"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/tv_buy_count"
+                                android:text="Buy: 12"
+                                android:background="@drawable/rectanglegrey"
+                                android:layout_weight="0.3"
+                                android:layout_marginEnd="5dp"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp"
+                                android:gravity="center"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_regular"
+                                android:ellipsize="marquee"
+                                android:singleLine="true"
+                                android:fadingEdge="horizontal"
+                                android:marqueeRepeatLimit="marquee_forever"
+                                android:scrollHorizontally="true"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/tv_sell_count"
+                                android:text="Sell: 12"
+                                android:background="@drawable/rectanglegrey"
+                                android:layout_weight="0.3"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginStart="5dp"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp"
+                                android:gravity="center"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_regular"
+                                android:ellipsize="marquee"
+                                android:singleLine="true"
+                                android:fadingEdge="horizontal"
+                                android:marqueeRepeatLimit="marquee_forever"
+                                android:scrollHorizontally="true"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/tv_rent_count"
+                                android:text="Rent: 12"
+                                android:background="@drawable/rectanglegrey"
+                                android:layout_weight="0.3"
+                                android:layout_marginStart="5dp"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp"
+                                android:gravity="center"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_regular"
+                                android:ellipsize="marquee"
+                                android:singleLine="true"
+                                android:fadingEdge="horizontal"
+                                android:marqueeRepeatLimit="marquee_forever"
+                                android:scrollHorizontally="true"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:weightSum="1.0"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="5dp"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/tv_experience"
+                                android:layout_weight="0.5"
+                                android:layout_marginEnd="5dp"
+                                android:gravity="center_vertical"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_regular"
+                                android:ellipsize="marquee"
+                                android:text="1 - 2 years experience"
+                                android:singleLine="true"
+                                android:drawableStart="@drawable/ic_star_border"
+                                android:drawablePadding="10dp"
+                                android:fadingEdge="horizontal"
+                                android:marqueeRepeatLimit="marquee_forever"
+                                android:scrollHorizontally="true"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/tv_location"
+                                android:layout_weight="0.5"
+                                android:layout_marginStart="5dp"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_regular"
+                                android:text="Dha Phase V"
+                                android:drawableStart="@drawable/ic_map_icon_colored"
+                                android:drawablePadding="10dp"
+                                android:gravity="center_vertical"
+                                android:fadingEdge="horizontal"
+                                android:singleLine="true"
+                                android:ellipsize="marquee"
+                                android:marqueeRepeatLimit="marquee_forever"
+                                android:scrollHorizontally="true"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:weightSum="1.0"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/tv_followers"
+                                android:layout_weight="0.5"
+                                android:layout_marginEnd="5dp"
+                                android:gravity="center_vertical"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_regular"
+                                android:ellipsize="marquee"
+                                android:text="12 followes"
+                                android:singleLine="true"
+                                android:drawableStart="@drawable/ic_follow_icon_colored"
+                                android:drawablePadding="10dp"
+                                android:fadingEdge="horizontal"
+                                android:marqueeRepeatLimit="marquee_forever"
+                                android:scrollHorizontally="true"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/tv_following"
+                                android:layout_weight="0.5"
+                                android:layout_marginStart="5dp"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_regular"
+                                android:text="20 following"
+                                android:drawableStart="@drawable/ic_follow_icon_colored"
+                                android:drawablePadding="10dp"
+                                android:gravity="center_vertical"
+                                android:fadingEdge="horizontal"
+                                android:singleLine="true"
+                                android:ellipsize="marquee"
+                                android:marqueeRepeatLimit="marquee_forever"
+                                android:scrollHorizontally="true"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:weightSum="1.0"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <Button
+                                android:id="@+id/btn_view_profile"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                android:background="@drawable/rectagle_blue_border"
+                                android:layout_weight="0.25"
+                                android:layout_width="0dp"
+                                android:layout_height="25dp"
+                                android:text="Profile"
+                                android:layout_marginEnd="5dp"
+                                android:paddingStart="5dp"
+                                android:paddingEnd="5dp"
+                                android:paddingTop="0dp"
+                                android:paddingBottom="0dp"
+                                android:gravity="center"
+                                android:fadingEdge="horizontal"
+                                android:singleLine="true"
+                                android:ellipsize="marquee"
+                                android:marqueeRepeatLimit="marquee_forever"
+                                android:scrollHorizontally="true"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10sp"/>
+
+                            <Button
+                                android:id="@+id/btn_call"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                android:background="@drawable/recangle_blue"
+                                android:layout_weight="0.25"
+                                android:layout_width="0dp"
+                                android:layout_height="25dp"
+                                android:text="Call"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginStart="5dp"
+                                android:paddingStart="5dp"
+                                android:paddingEnd="5dp"
+                                android:paddingTop="0dp"
+                                android:paddingBottom="0dp"
+                                android:gravity="center"
+                                android:fadingEdge="horizontal"
+                                android:singleLine="true"
+                                android:ellipsize="marquee"
+                                android:marqueeRepeatLimit="marquee_forever"
+                                android:scrollHorizontally="true"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="10sp"/>
+
+                            <Button
+                                android:id="@+id/btn_message"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                android:background="@drawable/rectagle_blue_border"
+                                android:layout_weight="0.25"
+                                android:layout_width="0dp"
+                                android:layout_height="25dp"
+                                android:text="Message"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginStart="5dp"
+                                android:paddingStart="5dp"
+                                android:paddingEnd="5dp"
+                                android:paddingTop="0dp"
+                                android:paddingBottom="0dp"
+                                android:gravity="center"
+                                android:fadingEdge="horizontal"
+                                android:singleLine="true"
+                                android:ellipsize="marquee"
+                                android:marqueeRepeatLimit="marquee_forever"
+                                android:scrollHorizontally="true"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10sp"/>
+
+                            <Button
+                                android:id="@+id/btn_get_direction"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                android:background="@drawable/recangle_blue"
+                                android:layout_weight="0.25"
+                                android:layout_width="0dp"
+                                android:layout_height="25dp"
+                                android:text="Get direction"
+                                android:layout_marginStart="5dp"
+                                android:paddingStart="5dp"
+                                android:paddingEnd="5dp"
+                                android:paddingTop="0dp"
+                                android:paddingBottom="0dp"
+                                android:gravity="center"
+                                android:fadingEdge="horizontal"
+                                android:singleLine="true"
+                                android:ellipsize="marquee"
+                                android:marqueeRepeatLimit="marquee_forever"
+                                android:scrollHorizontally="true"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="10sp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    </FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

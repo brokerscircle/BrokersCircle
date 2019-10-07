@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_margin="3dp"
+    android:background="@drawable/rectangleshape"
+    android:padding="3dp"
+    android:layout_height="280dp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/post_image"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@mipmap/background"
+        android:scaleType="fitXY"
+        app:riv_corner_radius="5dp"
+        app:riv_tile_mode="clamp" />
+
+    <LinearLayout
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        android:background="@drawable/rectanglegrey"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:gravity="bottom|end"
+            android:layout_width="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:text="2H AGO"
+            android:textColor="@color/colorDark"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_alignParentEnd="true"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:background="@drawable/circlebackground"
+            android:layout_width="@dimen/circleiconsize"
+            android:layout_height="@dimen/circleiconsize">
+
+            <ToggleButton
+                android:id="@+id/btn_favorite"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/favorite_selector"
+                android:checked="false"
+                android:text=""
+                android:textOff=""
+                android:textOn=""/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:padding="10dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/transparentrectangleshape"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:fadingEdge="horizontal"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:text="Title"
+            android:textStyle="bold"
+            android:textColor="@color/colorWhite"
+            android:textAlignment="viewStart"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/tv_description"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="Description"
+            android:textColor="@color/colorWhite"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

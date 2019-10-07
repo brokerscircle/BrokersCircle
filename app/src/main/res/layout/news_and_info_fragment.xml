@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    tools:context="brokerscirlce.com.fragments.NewsAndInfoFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        app:elevation="10dp"
+        android:backgroundTint="@color/colorGrey"
+        android:gravity="center"
+        android:layout_gravity="top"
+        android:layout_height="wrap_content"
+        app:layout_scrollFlags="scroll|enterAlways"
+        android:background="@color/bg_appbar_color">
+
+        <LinearLayout
+            android:weightSum="1.0"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:background="@color/colorWhite"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:baselineAligned="false">
+
+            <LinearLayout
+                android:id="@+id/menubtn_layout"
+                android:layout_weight="0.13"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/menuIcon"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_menu"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:contentDescription="TODO" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginEnd="5dp"
+                android:layout_weight="0.5"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/layout_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp">
+
+                    <EditText
+                        android:id="@+id/et_search"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingStart="45dp"
+                        android:background="@drawable/round_blue_border"
+                        android:gravity="center_vertical"
+                        android:fontFamily="@font/roboto_regular"
+                        android:hint="Search News"
+                        android:focusable="false"
+                        android:textSize="12sp"
+                        android:inputType="text"
+                        tools:ignore="HardcodedText,RtlSymmetry" />
+
+                    <LinearLayout
+                        android:background="@drawable/searchiconbackground"
+                        android:orientation="horizontal"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_width="35dp"
+                        android:layout_height="25dp">
+
+                        <ImageView
+                            android:visibility="visible"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:tint="@color/colorWhite"
+                            android:src="@drawable/ic_search_icon_colored"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="0.37"
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:gravity="end"
+                android:layout_height="match_parent">
+
+                <ToggleButton
+                    android:id="@+id/btn_switch"
+                    android:layout_gravity="center"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/dashboard_two_layout_switcher"
+                    android:checked="false"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn=""/>
+
+                <ImageView
+                    android:id="@+id/img_chat"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:tint="@color/appbar_chaticon"
+                    android:src="@drawable/ic_chat_icon"/>
+
+                <RelativeLayout
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="5dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/profile_image"
+                        android:layout_centerInParent="true"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:scaleType="centerCrop"
+                        app:riv_corner_radius="5dp"
+                        app:riv_border_width="1dp"
+                        app:riv_border_color="@color/colorBlue"
+                        android:src="@drawable/ic_user_icon_colored"/>
+
+                    <ImageView
+                        android:id="@+id/user_online_icon"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true"
+                        android:padding="0dp"
+                        android:src="@drawable/greendot_icon"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:background="@color/colorBlue"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_top_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <include layout="@layout/loading_news_placeholder_layout" />
+            <include layout="@layout/loading_news_placeholder_layout" />
+            <include layout="@layout/loading_news_placeholder_layout" />
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

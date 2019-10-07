@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context="brokerscirlce.com.Activities.JobBroard.CreateJobsActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_gravity="top"
+                android:background="@mipmap/create_background"
+                android:layout_width="match_parent"
+                android:layout_height="210dp">
+
+                <View
+                    android:background="@color/colorBlueWithOpacity"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:weightSum="1.0"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_gravity="top"
+                        android:layout_width="match_parent"
+                        android:divider="@color/colorBlack"
+                        android:layout_height="40dp">
+
+                        <LinearLayout
+                            android:id="@+id/btn_back"
+                            android:layout_weight="0.15"
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:gravity="center"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_arrow_back_black_24dp"
+                                android:tint="@color/colorWhite"
+                                android:layout_width="30dp"
+                                android:layout_height="match_parent" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="0.6"
+                            android:layout_gravity="center"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Search Property"
+                                android:fontFamily="@font/roboto_regular"
+                                android:letterSpacing="0.08"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorWhite"
+                                tools:ignore="HardcodedText" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="0.25"
+                            android:orientation="horizontal"
+                            android:layout_width="0dp"
+                            android:gravity="center"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/btn_chat"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:scaleType="fitCenter"
+                                android:tint="@color/colorWhite"
+                                android:src="@drawable/ic_chat_icon"/>
+
+                            <RelativeLayout
+                                android:layout_gravity="center"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp">
+
+                                <com.makeramen.roundedimageview.RoundedImageView
+                                    android:id="@+id/btn_profile"
+                                    android:layout_centerInParent="true"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:scaleType="fitCenter"
+                                    android:tint="@color/colorWhite"
+                                    app:riv_corner_radius="5dp"
+                                    app:riv_border_width="1dp"
+                                    app:riv_border_color="@color/colorWhite"
+                                    android:src="@drawable/ic_user_icon_white"/>
+
+                                <ImageView
+                                    android:id="@+id/user_online_icon"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentEnd="true"
+                                    android:padding="0dp"
+                                    android:src="@drawable/greendot_icon"
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"/>
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:background="@color/colorBlack"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp" />
+
+                    <LinearLayout
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Search Property"
+                            android:fontFamily="@font/roboto_regular"
+                            android:letterSpacing="0.08"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorWhite"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginEnd="40dp"
+                        android:text="Search property to track its values, see local market activity and more."
+                        android:fontFamily="@font/roboto_regular"
+                        android:letterSpacing="0.08"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="12sp"
+                        tools:ignore="HardcodedText" />
+
+                    <RelativeLayout
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/et_language"
+                            android:background="@drawable/round_blue_border"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:paddingEnd="40dp"
+                            android:paddingStart="40dp"
+                            android:textSize="@dimen/textsizedefault"
+                            android:fontFamily="@font/roboto_regular"
+                            android:hint="Property Title"
+                            android:inputType="textPersonName" />
+
+                        <ImageView
+                            android:layout_width="@dimen/textfieldiconsize"
+                            android:layout_height="@dimen/textfieldiconsize"
+                            android:tint="@color/colorWhite"
+                            android:src="@drawable/ic_language_icon"
+                            android:layout_marginStart="3dp"
+                            android:background="@drawable/circleblue"
+                            android:layout_centerVertical="true"/>
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_margin="20dp"
+                android:gravity="center"
+                android:background="@drawable/round_blue_border"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="35dp">
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabs_property_purpose"
+                    android:elevation="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:tabSelectedTextColor="@color/colorWhite"
+                    app:tabIndicatorHeight="0dp"
+                    android:padding="0dp"
+                    app:tabTextAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:layout_gravity="center_vertical"
+                    app:tabBackground="@drawable/tab_selector_round"
+                    app:tabMode="fixed"
+                    app:tabGravity="fill">
+
+                    <com.google.android.material.tabs.TabItem
+                        android:id="@+id/tab_sell"
+                        android:text="For Sell"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/round_blue"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="10sp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:buttonTint="@color/colorBlue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <com.google.android.material.tabs.TabItem
+                        android:id="@+id/tab_rent"
+                        android:text="For Rent"
+                        android:textSize="10sp"
+                        android:layout_margin="5dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:buttonTint="@color/colorBlue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <com.google.android.material.tabs.TabItem
+                        android:id="@+id/tab_wanted"
+                        android:text="For Wanted"
+                        android:layout_margin="5dp"
+                        android:textSize="10sp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:buttonTint="@color/colorBlue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </com.google.android.material.tabs.TabLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_centerInParent="true"
+                    android:background="@color/colorDarkGrey"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"/>
+
+                <TextView
+                    android:background="@color/colorWhite"
+                    android:text="Property Types"
+                    android:layout_centerVertical="true"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="10dp"
+                    android:textColor="@color/colorBlack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+            <HorizontalScrollView
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true"
+                android:scrollbars="none" >
+
+                <RadioGroup
+                    android:id="@+id/property_types_radio_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                </RadioGroup>
+
+            </HorizontalScrollView>
+
+            <HorizontalScrollView
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true"
+                android:scrollbars="none" >
+
+                <RadioGroup
+                    android:id="@+id/types_child_radio_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                </RadioGroup>
+
+            </HorizontalScrollView>
+
+            <RelativeLayout
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_centerInParent="true"
+                    android:background="@color/colorDarkGrey"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"/>
+
+                <TextView
+                    android:background="@color/colorWhite"
+                    android:text="Bedrooms"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/colorBlack"
+                    android:paddingEnd="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+            <HorizontalScrollView
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true"
+                android:scrollbars="none" >
+
+                <RadioGroup
+                    android:id="@+id/bedroom_radio_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                </RadioGroup>
+
+            </HorizontalScrollView>
+
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_centerInParent="true"
+                    android:background="@color/colorDarkGrey"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"/>
+
+                <TextView
+                    android:background="@color/colorWhite"
+                    android:text="Baths"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/colorBlack"
+                    android:paddingEnd="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+            <HorizontalScrollView
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true"
+                android:scrollbars="none" >
+
+                <RadioGroup
+                    android:id="@+id/bathroom_radio_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                </RadioGroup>
+
+            </HorizontalScrollView>
+
+            <RelativeLayout
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_centerInParent="true"
+                    android:background="@color/colorDarkGrey"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"/>
+
+                <LinearLayout
+                    android:layout_centerVertical="true"
+                    android:paddingEnd="10dp"
+                    android:background="@color/colorWhite"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Country"
+                        android:paddingEnd="5dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textColor="@color/colorBlack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/txt_country"
+                        android:text="(Pakistan)"
+                        android:fontFamily="@font/roboto_regular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:paddingStart="10dp"
+                    android:background="@color/colorWhite"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txt_change_country"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Change Country"
+                        android:textColor="@color/colorBlue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginBottom="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_city"
+                    android:background="@drawable/round_blue_border"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:paddingStart="40dp"
+                    android:textSize="@dimen/textsizedefault"
+                    android:fontFamily="@font/roboto_regular"
+                    android:hint="City"
+                    android:inputType="textPersonName" />
+
+                <ImageView
+                    android:layout_width="@dimen/textfieldiconsize"
+                    android:layout_height="@dimen/textfieldiconsize"
+                    android:tint="@color/colorWhite"
+                    android:src="@drawable/ic_city_icon"
+                    android:layout_marginStart="3dp"
+                    android:background="@drawable/circleblue"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginBottom="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_location"
+                    android:background="@drawable/round_blue_border"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:paddingStart="40dp"
+                    android:textSize="@dimen/textsizedefault"
+                    android:fontFamily="@font/roboto_regular"
+                    android:hint="Location"
+                    android:inputType="textPersonName" />
+
+                <ImageView
+                    android:layout_width="@dimen/textfieldiconsize"
+                    android:layout_height="@dimen/textfieldiconsize"
+                    android:tint="@color/colorWhite"
+                    android:src="@drawable/ic_map_icon"
+                    android:layout_marginStart="3dp"
+                    android:background="@drawable/circleblue"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/btn_search"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/round_blue"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/buttonheight">
+
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:text="Search Property"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/buttontextsizedefault"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="@color/colorWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+            <!-- Copyright Layout -->
+            <LinearLayout
+                android:id="@+id/copyright"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_gravity="bottom|center"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <include layout="@layout/copyright_layout"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <include layout="@layout/internet_connection_layout"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

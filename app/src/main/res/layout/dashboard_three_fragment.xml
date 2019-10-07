@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="brokerscirlce.com.fragments.DashboardThreeFragment">
+
+    <RelativeLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="5dp"
+        android:layout_height="12dp">
+
+        <View
+            android:background="@color/searchbackground"
+            android:layout_width="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_height="1dp"/>
+
+        <ToggleButton
+            android:id="@+id/showhide"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:padding="0dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:backgroundTint="@color/colorWhite"
+            android:checked="false"
+            android:textSize="10sp"
+            android:text=""
+            android:textOff="Hide Brokers"
+            android:textOn="Show Brokers"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutbrokers"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:background="@color/colorWhite"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="BROKERS"
+                    android:layout_alignParentStart="true"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="@color/colorBlack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_viewall"
+                    android:text="@string/view_all"
+                    android:layout_alignParentEnd="true"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="@color/colorLightBlue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer_top_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <include layout="@layout/loading_dashboard_brokers_layout" />
+                <include layout="@layout/loading_dashboard_brokers_layout" />
+                <include layout="@layout/loading_dashboard_brokers_layout" />
+                <include layout="@layout/loading_dashboard_brokers_layout" />
+                <include layout="@layout/loading_dashboard_brokers_layout" />
+            </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginStart="5dp"
+            android:id="@+id/recycle_broker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:background="@color/searchbackground"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+    </LinearLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        android:elevation="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        app:tabInlineLabel="true"
+        app:tabSelectedTextColor="@color/colorBlack"
+        app:tabIndicatorColor="@color/searchiconbackground"
+        app:tabIndicatorHeight="1dp"
+        app:tabMode="fixed"
+        app:tabGravity="fill">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_buy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/buy_selector"
+            android:text="Buy" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_lease"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/rent_selector"
+            android:text="Rent" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_wanted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_find_property_icon_colored"
+            android:text="Wanted" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"  />
+
+</LinearLayout>

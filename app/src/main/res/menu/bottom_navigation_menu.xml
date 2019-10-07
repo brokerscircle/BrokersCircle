@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/home_selector_icon"
+        android:title="@string/menu_home" />
+    <item
+        android:id="@+id/nav_news"
+        android:icon="@drawable/news_selector_icon"
+        android:title="News &amp; Info" />
+    <item
+        android:id="@+id/nav_jobs"
+        android:icon="@drawable/job_selector"
+        android:title="Jobs" />
+    <item
+        android:id="@+id/nav_notification"
+        android:icon="@drawable/notification_selector_icon"
+        android:title="Notification" />
+    <item
+        android:id="@+id/nav_project"
+        android:icon="@drawable/project_selector_icon"
+        android:title="Projects"/>
+</menu>

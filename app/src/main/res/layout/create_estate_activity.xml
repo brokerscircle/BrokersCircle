@@ -1,0 +1,874 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context="brokerscirlce.com.Activities.Estates.CreateEstateActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_gravity="top"
+                android:background="@mipmap/create_background"
+                android:layout_width="match_parent"
+                android:layout_height="120dp">
+
+                <View
+                    android:background="@color/colorBlueWithOpacity"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:weightSum="1.0"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_gravity="top"
+                        android:layout_width="match_parent"
+                        android:divider="@color/colorBlack"
+                        android:layout_height="40dp">
+
+                        <LinearLayout
+                            android:id="@+id/btn_back"
+                            android:layout_weight="0.15"
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:gravity="center"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_arrow_back_black_24dp"
+                                android:tint="@color/colorWhite"
+                                android:layout_width="30dp"
+                                android:layout_height="match_parent" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="0.6"
+                            android:layout_gravity="center"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="List Real Estate"
+                                android:fontFamily="@font/roboto_regular"
+                                android:letterSpacing="0.08"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorWhite"
+                                tools:ignore="HardcodedText" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="0.25"
+                            android:orientation="horizontal"
+                            android:layout_width="0dp"
+                            android:gravity="center"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/btn_chat"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:scaleType="fitCenter"
+                                android:tint="@color/colorWhite"
+                                android:src="@drawable/ic_chat_icon"/>
+
+                            <RelativeLayout
+                                android:layout_gravity="center"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp">
+
+                                <com.makeramen.roundedimageview.RoundedImageView
+                                    android:id="@+id/btn_profile"
+                                    android:layout_centerInParent="true"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:scaleType="fitCenter"
+                                    android:tint="@color/colorWhite"
+                                    app:riv_corner_radius="5dp"
+                                    app:riv_border_width="1dp"
+                                    app:riv_border_color="@color/colorWhite"
+                                    android:src="@drawable/ic_user_icon_white"/>
+
+                                <ImageView
+                                    android:id="@+id/user_online_icon"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentEnd="true"
+                                    android:padding="0dp"
+                                    android:src="@drawable/greendot_icon"
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"/>
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:background="@color/colorBlack"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp" />
+
+                    <LinearLayout
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="List Real Estate"
+                            android:fontFamily="@font/roboto_regular"
+                            android:letterSpacing="0.08"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorWhite"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:text="Enter Real Estate details"
+                        android:fontFamily="@font/roboto_regular"
+                        android:letterSpacing="0.08"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="12sp"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <!-- Step One Contents -->
+            <LinearLayout
+                android:id="@+id/content_step_one"
+                android:paddingTop="20dp"
+                android:visibility="visible"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/layout_more_options"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_marginBottom="20dp"
+                        android:layout_gravity="center"
+                        android:id="@+id/layout"
+                        android:orientation="horizontal"
+                        android:layout_width="115dp"
+                        android:layout_height="115dp">
+
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:id="@+id/iv_image"
+                            android:layout_margin="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:riv_border_width="1dp"
+                            app:riv_corner_radius="10dp"
+                            android:scaleType="fitXY"
+                            app:riv_border_color="@color/colorBlack"
+                            android:src="@drawable/ic_real_state_icon"/>
+
+                        <ImageView
+                            android:id="@+id/online_icon"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/circleblue"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/ic_add"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_marginEnd="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <View
+                            android:layout_centerInParent="true"
+                            android:background="@color/colorDarkGrey"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"/>
+
+                        <TextView
+                            android:background="@color/colorWhite"
+                            android:text="Real Estate Types"
+                            android:layout_centerVertical="true"
+                            android:paddingStart="20dp"
+                            android:paddingEnd="10dp"
+                            android:textColor="@color/colorBlack"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </RelativeLayout>
+
+                    <HorizontalScrollView
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fillViewport="true"
+                        android:scrollbars="none" >
+
+                        <RadioGroup
+                            android:id="@+id/types_radio_group"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                        </RadioGroup>
+
+                    </HorizontalScrollView>
+
+                    <RelativeLayout
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <View
+                            android:layout_centerInParent="true"
+                            android:background="@color/colorDarkGrey"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"/>
+
+                        <TextView
+                            android:background="@color/colorWhite"
+                            android:text="Information"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/colorBlack"
+                            android:paddingEnd="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp">
+
+                        <EditText
+                            android:id="@+id/et_title"
+                            android:background="@drawable/round_blue_border"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingEnd="40dp"
+                            android:paddingStart="40dp"
+                            android:textSize="@dimen/textsizedefault"
+                            android:fontFamily="@font/roboto_regular"
+                            android:hint="Real Estate Name"
+                            android:inputType="textPersonName"
+                            android:nextFocusForward="@id/et_password" />
+
+                        <ImageView
+                            android:layout_width="@dimen/textfieldiconsize"
+                            android:layout_height="@dimen/textfieldiconsize"
+                            android:tint="@color/colorWhite"
+                            android:src="@drawable/ic_language_icon"
+                            android:layout_marginStart="3dp"
+                            android:background="@drawable/circleblue"
+                            android:layout_centerVertical="true"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/et_description"
+                            android:background="@drawable/rectagle_blue_border"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="top"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp"
+                            android:minLines="5"
+                            android:textSize="@dimen/textsizedefault"
+                            android:fontFamily="@font/roboto_regular"
+                            android:hint="About"
+                            android:inputType="textMultiLine" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/btn_next"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginStart="20dp"
+                        android:background="@drawable/round_blue"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/buttonheight">
+
+                        <TextView
+                            android:layout_centerInParent="true"
+                            android:text="Next"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/buttontextsizedefault"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textColor="@color/colorWhite"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <ImageView
+                            android:layout_alignParentEnd="true"
+                            android:layout_width="@dimen/buttoniconsize"
+                            android:layout_height="@dimen/buttoniconsize"
+                            android:src="@drawable/ic_arrow_forward"
+                            android:background="@drawable/circlegreen"
+                            android:backgroundTint="@color/colorWhite"
+                            android:layout_centerVertical="true"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- Step One Contents End -->
+
+            <!-- Step two Contents -->
+            <LinearLayout
+                android:id="@+id/content_step_two"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <View
+                        android:layout_centerInParent="true"
+                        android:background="@color/colorDarkGrey"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"/>
+
+                    <TextView
+                        android:background="@color/colorWhite"
+                        android:text="Contact Details"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/colorBlack"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/et_email"
+                        android:background="@drawable/round_blue_border"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/textfieldheight"
+                        android:paddingEnd="40dp"
+                        android:paddingStart="40dp"
+                        android:textSize="@dimen/textsizedefault"
+                        android:fontFamily="@font/roboto_regular"
+                        android:hint="Email address"
+                        android:inputType="textEmailAddress"
+                        android:nextFocusForward="@id/et_password" />
+
+                    <ImageView
+                        android:layout_width="@dimen/textfieldiconsize"
+                        android:layout_height="@dimen/textfieldiconsize"
+                        android:tint="@color/colorWhite"
+                        android:src="@drawable/ic_email_icon"
+                        android:layout_marginStart="3dp"
+                        android:background="@drawable/circleblue"
+                        android:layout_centerVertical="true"/>
+
+                    <ImageView
+                        android:id="@+id/drawable_email"
+                        android:layout_alignParentEnd="true"
+                        android:layout_width="@dimen/erroriconsize"
+                        android:layout_height="@dimen/erroriconsize"
+                        android:layout_marginEnd="8dp"
+                        android:tint="@color/colorWhite"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:weightSum="1.0"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_weight="0.5"
+                        android:layout_marginEnd="5dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/et_phone_code"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/textfieldheight"
+                            android:background="@drawable/round_blue_border"
+                            android:paddingStart="40dp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:focusable="false"
+                            android:hint="Select Country Code"
+                            android:textSize="@dimen/textsizedefault"
+                            android:inputType="phone"
+                            tools:ignore="HardcodedText,RtlSymmetry" />
+
+                        <ImageView
+                            android:layout_width="@dimen/textfieldiconsize"
+                            android:layout_height="@dimen/textfieldiconsize"
+                            android:layout_marginStart="3dp"
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/ic_number_icon"
+                            android:tint="@color/colorWhite"
+                            android:layout_centerVertical="true"/>
+
+                        <ImageView
+                            android:id="@+id/drawable_phone_code"
+                            android:layout_alignParentEnd="true"
+                            android:layout_width="@dimen/erroriconsize"
+                            android:layout_height="@dimen/erroriconsize"
+                            android:layout_marginEnd="8dp"
+                            android:tint="@color/colorWhite"
+                            android:layout_centerVertical="true"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="0.5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/et_phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/textfieldheight"
+                            android:background="@drawable/round_blue_border"
+                            android:paddingStart="40dp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:hint="Phone"
+                            android:textSize="@dimen/textsizedefault"
+                            android:inputType="phone"/>
+
+                        <ImageView
+                            android:layout_width="@dimen/textfieldiconsize"
+                            android:layout_height="@dimen/textfieldiconsize"
+                            android:layout_marginStart="3dp"
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/ic_call_icon"
+                            android:tint="@color/colorWhite"
+                            android:layout_centerVertical="true"/>
+
+                        <ImageView
+                            android:id="@+id/drawable_phone"
+                            android:layout_alignParentEnd="true"
+                            android:layout_width="@dimen/erroriconsize"
+                            android:layout_height="@dimen/erroriconsize"
+                            android:layout_marginEnd="8dp"
+                            android:tint="@color/colorWhite"
+                            android:layout_centerVertical="true"/>
+
+
+                        <com.github.ybq.android.spinkit.SpinKitView
+                            android:id="@+id/loading_phone"
+                            android:visibility="gone"
+                            style="@style/SpinKitView.ThreeBounce"
+                            android:layout_width="@dimen/erroriconsize"
+                            android:layout_height="@dimen/erroriconsize"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="8dp"
+                            app:SpinKit_Color="@color/colorBlue" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/et_address"
+                        android:background="@drawable/round_blue_border"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/textfieldheight"
+                        android:paddingEnd="40dp"
+                        android:paddingStart="40dp"
+                        android:textSize="@dimen/textsizedefault"
+                        android:fontFamily="@font/roboto_regular"
+                        android:hint="Address"
+                        android:inputType="textEmailAddress"
+                        android:nextFocusForward="@id/et_password" />
+
+                    <ImageView
+                        android:layout_width="@dimen/textfieldiconsize"
+                        android:layout_height="@dimen/textfieldiconsize"
+                        android:tint="@color/colorWhite"
+                        android:src="@drawable/ic_address_icon"
+                        android:layout_marginStart="3dp"
+                        android:background="@drawable/circleblue"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:weightSum="1.0"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_weight="0.5"
+                        android:layout_marginEnd="5dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/et_country"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/textfieldheight"
+                            android:background="@drawable/round_blue_border"
+                            android:paddingStart="40dp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:focusable="false"
+                            android:hint="Country"
+                            android:textSize="@dimen/textsizedefault"
+                            android:inputType="phone"
+                            tools:ignore="HardcodedText,RtlSymmetry" />
+
+                        <ImageView
+                            android:layout_width="@dimen/textfieldiconsize"
+                            android:layout_height="@dimen/textfieldiconsize"
+                            android:layout_marginStart="3dp"
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/ic_country_icon"
+                            android:tint="@color/colorWhite"
+                            android:layout_centerVertical="true"/>
+
+                        <ImageView
+                            android:id="@+id/drawable_country"
+                            android:layout_alignParentEnd="true"
+                            android:layout_width="@dimen/erroriconsize"
+                            android:layout_height="@dimen/erroriconsize"
+                            android:layout_marginEnd="8dp"
+                            android:tint="@color/colorWhite"
+                            android:layout_centerVertical="true"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="0.5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/et_city"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/textfieldheight"
+                            android:background="@drawable/round_blue_border"
+                            android:paddingStart="40dp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:hint="City"
+                            android:textSize="@dimen/textsizedefault"
+                            android:inputType="phone"/>
+
+                        <ImageView
+                            android:layout_width="@dimen/textfieldiconsize"
+                            android:layout_height="@dimen/textfieldiconsize"
+                            android:layout_marginStart="3dp"
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/ic_city_icon"
+                            android:tint="@color/colorWhite"
+                            android:layout_centerVertical="true"/>
+
+                        <ImageView
+                            android:id="@+id/drawable_city"
+                            android:layout_alignParentEnd="true"
+                            android:layout_width="@dimen/erroriconsize"
+                            android:layout_height="@dimen/erroriconsize"
+                            android:layout_marginEnd="8dp"
+                            android:tint="@color/colorWhite"
+                            android:layout_centerVertical="true"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:weightSum="1.0"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_weight="0.5"
+                        android:layout_marginEnd="5dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/et_location"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/textfieldheight"
+                            android:background="@drawable/round_blue_border"
+                            android:paddingStart="40dp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:focusable="false"
+                            android:hint="Location"
+                            android:textSize="@dimen/textsizedefault"
+                            android:inputType="phone"
+                            tools:ignore="HardcodedText,RtlSymmetry" />
+
+                        <ImageView
+                            android:layout_width="@dimen/textfieldiconsize"
+                            android:layout_height="@dimen/textfieldiconsize"
+                            android:layout_marginStart="3dp"
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/ic_map_icon"
+                            android:tint="@color/colorWhite"
+                            android:layout_centerVertical="true"/>
+
+                        <ImageView
+                            android:id="@+id/drawable_location"
+                            android:layout_alignParentEnd="true"
+                            android:layout_width="@dimen/erroriconsize"
+                            android:layout_height="@dimen/erroriconsize"
+                            android:layout_marginEnd="8dp"
+                            android:tint="@color/colorWhite"
+                            android:layout_centerVertical="true"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="0.5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/et_postalcode"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/textfieldheight"
+                            android:background="@drawable/round_blue_border"
+                            android:paddingStart="40dp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:hint="Postal Code"
+                            android:textSize="@dimen/textsizedefault"
+                            android:inputType="number"/>
+
+                        <ImageView
+                            android:layout_width="@dimen/textfieldiconsize"
+                            android:layout_height="@dimen/textfieldiconsize"
+                            android:layout_marginStart="3dp"
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/ic_postal_code_icon"
+                            android:tint="@color/colorWhite"
+                            android:layout_centerVertical="true"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <View
+                        android:layout_centerInParent="true"
+                        android:background="@color/colorDarkGrey"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"/>
+
+                    <TextView
+                        android:background="@color/colorWhite"
+                        android:text="Map Location"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/colorBlack"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+                <FrameLayout
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/flMapContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp">
+
+                    <fragment
+                        android:id="@+id/map"
+                        class="brokerscirlce.com.Views.MapFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/btn_prev_two"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/round_blue"
+                        android:layout_weight="0.5"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/buttonheight">
+
+                        <TextView
+                            android:layout_centerInParent="true"
+                            android:text="PREV"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/buttontextsizedefault"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textColor="@color/colorWhite"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <ImageView
+                            android:layout_alignParentStart="true"
+                            android:layout_width="@dimen/buttoniconsize"
+                            android:layout_height="@dimen/buttoniconsize"
+                            android:layout_marginStart="5dp"
+                            android:src="@drawable/ic_arrow_back_black_24dp"
+                            android:background="@drawable/circlegreen"
+                            android:backgroundTint="@color/colorWhite"
+                            android:layout_centerVertical="true"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/btn_submit"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/round_blue"
+                        android:layout_weight="0.5"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/buttonheight">
+
+                        <TextView
+                            android:layout_centerInParent="true"
+                            android:text="Submit"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/buttontextsizedefault"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textColor="@color/colorWhite"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <ImageView
+                            android:layout_alignParentEnd="true"
+                            android:layout_width="@dimen/buttoniconsize"
+                            android:layout_height="@dimen/buttoniconsize"
+                            android:layout_marginEnd="5dp"
+                            android:src="@drawable/ic_arrow_forward"
+                            android:background="@drawable/circlegreen"
+                            android:backgroundTint="@color/colorWhite"
+                            android:layout_centerVertical="true"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- Step Three Contents End -->
+
+            <!-- Copyright Layout -->
+            <LinearLayout
+                android:id="@+id/copyright"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_gravity="bottom|center"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <include layout="@layout/copyright_layout"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <include layout="@layout/internet_connection_layout"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

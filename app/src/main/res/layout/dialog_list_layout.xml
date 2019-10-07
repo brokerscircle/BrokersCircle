@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/bottom_sheet_layout_list"
+    android:background="@drawable/rectagle_blue_border"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/bottomsheettitle"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="Select country code"
+        android:background="@color/colorGrey"
+        android:fontFamily="@font/roboto_regular"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textColor="@color/colorBlue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+<!--    <View-->
+<!--        android:background="@color/colorGrey"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0.5dp"/>-->
+
+    <LinearLayout
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/search_view"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:paddingEnd="20dp"
+            android:paddingStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rectagle_blue_border"
+            android:inputType="phone"
+            android:hint="Search...." />
+
+        <LinearLayout
+            android:id="@+id/loadingdata"
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.github.ybq.android.spinkit.SpinKitView
+                android:id="@+id/spin_kit"
+                style="@style/SpinKitView.ThreeBounce"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:SpinKit_Color="@color/colorBlue" />
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/dialoglist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</LinearLayout>

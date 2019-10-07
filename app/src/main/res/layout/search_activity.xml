@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/searchbg"
+    android:orientation="vertical"
+    tools:context="brokerscirlce.com.Activities.SearchActivity">
+
+    <LinearLayout
+        android:weightSum="1.0"
+        android:gravity="top"
+        android:orientation="horizontal"
+        android:layout_gravity="top"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <LinearLayout
+            android:id="@+id/backbtn"
+            android:layout_weight="0.12"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_arrow_back_black_24dp"
+                android:tint="@color/appbar_actionicon_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="TODO" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="0.73"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="18sp"
+                android:text="Search"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="0.15"
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_height="match_parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_gravity="center"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:scaleType="centerCrop"
+                app:civ_border_width="1dp"
+                app:civ_border_color="@color/colorBlue"
+                android:src="@drawable/ic_user_icon_colored"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:background="@color/colorBlack"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginTop="25dp"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_gravity="center"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="24sp"
+                android:textColor="@color/colorBlack"
+                android:text="What do you want to search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_gravity="center"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="14sp"
+                android:textColor="@color/colorBlack"
+                android:text="Select the following category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_marginBottom="15dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/search_property"
+                    android:background="@drawable/rectabglegraywithshadow"
+                    android:orientation="vertical"
+                    android:gravity="bottom|center"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_find_property_icon_colored"/>
+
+                    <TextView
+                        android:text="Property"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/search_projects"
+                    android:background="@drawable/rectabglegraywithshadow"
+                    android:orientation="vertical"
+                    android:gravity="bottom|center"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/project_selector_icon"/>
+
+                    <TextView
+                        android:text="Projects"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/search_brokers"
+                    android:background="@drawable/rectabglegraywithshadow"
+                    android:orientation="vertical"
+                    android:gravity="bottom|center"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_brokers_icon_colored"/>
+
+                    <TextView
+                        android:text="Brokers"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/search_developers"
+                    android:background="@drawable/rectabglegraywithshadow"
+                    android:orientation="vertical"
+                    android:gravity="bottom|center"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_developer_icon_color"/>
+
+                    <TextView
+                        android:text="Developers"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/search_estates"
+                    android:background="@drawable/rectabglegraywithshadow"
+                    android:orientation="vertical"
+                    android:gravity="bottom|center"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_estate_owner_icon_colored"/>
+
+                    <TextView
+                        android:text="Estates"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/search_job_board"
+                    android:background="@drawable/rectabglegraywithshadow"
+                    android:orientation="vertical"
+                    android:gravity="bottom|center"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/jobsiconimage"/>
+
+                    <TextView
+                        android:text="Jobs Board"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

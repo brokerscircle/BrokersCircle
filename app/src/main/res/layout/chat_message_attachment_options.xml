@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/add_attachment_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:paddingBottom="16dp"
+    android:paddingTop="16dp"
+    android:stretchColumns="1,2,3"
+    android:visibility="gone">
+
+    <!--row 1 -->
+
+    <TableRow>
+
+        <TextView
+            android:id="@+id/attachment_property"
+            android:layout_column="1"
+            android:drawablePadding="8dp"
+            android:drawableTop="@drawable/ic_find_property_icon_colored"
+            android:gravity="center"
+            android:text="Property" />
+
+        <TextView
+            android:id="@+id/attachment_project"
+            android:layout_column="2"
+            android:drawablePadding="8dp"
+            android:drawableTop="@drawable/ic_project_icon_colored"
+            android:gravity="center"
+            android:text="Project" />
+
+        <TextView
+            android:id="@+id/attachment_broker"
+            android:layout_column="3"
+            android:drawablePadding="8dp"
+            android:drawableTop="@drawable/ic_brokers_icon_colored"
+            android:gravity="center"
+            android:text="Broker" />
+
+    </TableRow>
+
+    <TableRow android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/attachment_gallery"
+            android:layout_column="1"
+            android:drawablePadding="8dp"
+            android:drawableTop="@drawable/ic_images_audio_icon_colored"
+            android:gravity="center"
+            android:text="Image" />
+
+        <TextView
+            android:id="@+id/attachment_audio"
+            android:layout_column="2"
+            android:drawablePadding="8dp"
+            android:drawableTop="@drawable/ic_headset"
+            android:gravity="center"
+            android:text="Audio" />
+
+        <TextView
+            android:id="@+id/attachment_video"
+            android:layout_column="3"
+            android:drawablePadding="8dp"
+            android:drawableTop="@drawable/ic_video_icon_colored"
+            android:gravity="center"
+            android:text="Video" />
+
+    </TableRow>
+
+    <TableRow android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/attachment_contact"
+            android:layout_column="1"
+            android:drawablePadding="8dp"
+            android:drawableTop="@drawable/ic_perm_contact_calendar_black_24dp"
+            android:gravity="center"
+            android:text="Contact" />
+
+        <TextView
+            android:id="@+id/attachment_location"
+            android:layout_column="2"
+            android:drawablePadding="8dp"
+            android:drawableTop="@drawable/ic_map_icon_colored"
+            android:gravity="center"
+            android:text="Location" />
+
+        <TextView
+            android:id="@+id/attachment_document"
+            android:layout_column="3"
+            android:drawablePadding="8dp"
+            android:drawableTop="@drawable/ic_insert_drive_file_black_24dp"
+            android:gravity="center"
+            android:text="Document" />
+
+    </TableRow>
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="#F0EFED"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:padding="16dp">-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:gravity="center"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <ImageButton-->
+<!--                android:id="@+id/gallery_img_btn"-->
+<!--                android:layout_width="70dp"-->
+<!--                android:layout_height="70dp"-->
+<!--                android:background="@drawable/ic_menu_gallery" />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="16dp"-->
+<!--                android:text="Gallery" />-->
+<!--        </LinearLayout>-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:gravity="center"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <ImageButton-->
+<!--                android:id="@+id/photo_img_btn"-->
+<!--                android:layout_width="70dp"-->
+<!--                android:layout_height="70dp"-->
+<!--                android:background="@drawable/ic_menu_gallery" />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="16dp"-->
+<!--                android:text="Photo" />-->
+<!--        </LinearLayout>-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:gravity="center"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <ImageButton-->
+<!--                android:id="@+id/video_img_btn"-->
+<!--                android:layout_width="70dp"-->
+<!--                android:layout_height="70dp"-->
+<!--                android:background="@drawable/ic_video_icon" />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="16dp"-->
+<!--                android:text="Video" />-->
+<!--        </LinearLayout>-->
+
+<!--    </LinearLayout>-->
+
+
+<!--    &lt;!&ndash;row 2 &ndash;&gt;-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="#F0EFED"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:padding="16dp">-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:gravity="center"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <ImageButton-->
+<!--                android:id="@+id/audio_img_btn"-->
+<!--                android:layout_width="70dp"-->
+<!--                android:layout_height="70dp"-->
+<!--                android:background="@drawable/ic_audio_icon" />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="16dp"-->
+<!--                android:text="Audio" />-->
+<!--        </LinearLayout>-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:gravity="center"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <ImageButton-->
+<!--                android:id="@+id/location_img_btn"-->
+<!--                android:layout_width="70dp"-->
+<!--                android:layout_height="70dp"-->
+<!--                android:background="@drawable/ic_map_icon" />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="16dp"-->
+<!--                android:text="Location" />-->
+<!--        </LinearLayout>-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:gravity="center"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <ImageButton-->
+<!--                android:id="@+id/contact_img_btn"-->
+<!--                android:layout_width="70dp"-->
+<!--                android:layout_height="70dp"-->
+<!--                android:background="@drawable/ic_home_icon" />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="16dp"-->
+<!--                android:text="Contact" />-->
+<!--        </LinearLayout>-->
+
+<!--    </LinearLayout>-->
+
+</TableLayout>

@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="brokerscirlce.com.fragments.DashboardSixFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:layout_height="wrap_content">
+
+                    <View
+                        android:background="@color/searchbackground"
+                        android:layout_width="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_height="1dp"/>
+
+                    <ToggleButton
+                        android:id="@+id/showhide"
+                        android:visibility="gone"
+                        android:gravity="center"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="15dp"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:paddingBottom="0dp"
+                        android:paddingTop="0dp"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/roboto_regular"
+                        android:backgroundTint="@color/colorWhite"
+                        android:checked="false"
+                        android:textSize="12sp"
+                        android:text=""
+                        android:textOff="Hide Brokers"
+                        android:textOn="Show Brokers"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:gravity="center_horizontal"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/layoutbrokers"
+                        android:visibility="gone"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_alignParentStart="true"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_marginEnd="5dp"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/ic_brokers_icon_colored"
+                                android:contentDescription="TODO" />
+
+                            <TextView
+                                android:text="BROKERS"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:letterSpacing="0.08"
+                                android:fontFamily="@font/roboto_regular"
+                                android:textColor="@color/colorBlack"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_broker_viewall"
+                            android:textStyle="bold"
+                            android:letterSpacing="0.08"
+                            android:text="@string/view_all"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textColor="@color/colorLightBlue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_gravity="center"
+                        android:id="@+id/recyclerview_broker"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <!--                    <View-->
+                    <!--                        android:layout_marginTop="5dp"-->
+                    <!--                        android:layout_marginBottom="5dp"-->
+                    <!--                        android:background="@color/searchbackground"-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="1dp"/>-->
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutbanners"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!--                    <RelativeLayout-->
+                    <!--                        android:orientation="horizontal"-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="wrap_content">-->
+
+                    <!--                        <LinearLayout-->
+                    <!--                            android:layout_alignParentStart="true"-->
+                    <!--                            android:gravity="center_vertical"-->
+                    <!--                            android:orientation="horizontal"-->
+                    <!--                            android:layout_width="wrap_content"-->
+                    <!--                            android:layout_height="wrap_content">-->
+
+                    <!--                            <ImageView-->
+                    <!--                                android:layout_marginEnd="5dp"-->
+                    <!--                                android:layout_width="20dp"-->
+                    <!--                                android:layout_height="20dp"-->
+                    <!--                                android:src="@drawable/ic_find_property_icon_colored"-->
+                    <!--                                android:contentDescription="TODO" />-->
+
+                    <!--                            <TextView-->
+                    <!--                                android:text="Paid Add"-->
+                    <!--                                android:textStyle="bold"-->
+                    <!--                                android:letterSpacing="0.08"-->
+                    <!--                                android:textSize="12sp"-->
+                    <!--                                android:fontFamily="@font/roboto_regular"-->
+                    <!--                                android:textColor="@color/colorBlack"-->
+                    <!--                                android:layout_width="wrap_content"-->
+                    <!--                                android:layout_height="wrap_content" />-->
+
+                    <!--                        </LinearLayout>-->
+
+                    <!--                        <TextView-->
+                    <!--                            android:id="@+id/tv_viewall_banners"-->
+                    <!--                            android:text="@string/view_all"-->
+                    <!--                            android:textStyle="bold"-->
+                    <!--                            android:letterSpacing="0.08"-->
+                    <!--                            android:layout_alignParentEnd="true"-->
+                    <!--                            android:layout_centerVertical="true"-->
+                    <!--                            android:textSize="12sp"-->
+                    <!--                            android:fontFamily="@font/roboto_regular"-->
+                    <!--                            android:textColor="@color/colorLightBlue"-->
+                    <!--                            android:layout_width="wrap_content"-->
+                    <!--                            android:layout_height="wrap_content" />-->
+
+                    <!--                    </RelativeLayout>-->
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_gravity="center"
+                        android:id="@+id/recycleview_banners"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="center_horizontal"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/layoutpropeties"
+                        android:visibility="gone"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_alignParentStart="true"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_marginEnd="5dp"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/ic_find_property_icon_colored"
+                                android:contentDescription="TODO" />
+
+                            <TextView
+                                android:text="PROPERTIES"
+                                android:textStyle="bold"
+                                android:letterSpacing="0.08"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/roboto_regular"
+                                android:textColor="@color/colorBlack"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_viewall_properties"
+                            android:text="@string/view_all"
+                            android:textStyle="bold"
+                            android:letterSpacing="0.08"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textColor="@color/colorLightBlue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycleview_properties"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:background="@color/colorGrey"
+                    android:gravity="center_horizontal"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/layoutlocations"
+                        android:visibility="gone"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_alignParentStart="true"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_marginEnd="5dp"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/ic_map_icon_colored"
+                                android:contentDescription="TODO" />
+
+                            <TextView
+                                android:text="NEAR LOCATIONS"
+                                android:textStyle="bold"
+                                android:letterSpacing="0.08"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/roboto_regular"
+                                android:textColor="@color/colorBlack"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_viewall_location"
+                            android:text="@string/view_all"
+                            android:textStyle="bold"
+                            android:letterSpacing="0.08"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textColor="@color/colorLightBlue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_gravity="center"
+                        android:id="@+id/recycleview_locations"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="center_horizontal"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/layoutsuggestions"
+                        android:visibility="gone"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_alignParentStart="true"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_marginEnd="5dp"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/ic_map_icon_colored"
+                                android:contentDescription="TODO" />
+
+                            <TextView
+                                android:text="Brokers you may know"
+                                android:textStyle="bold"
+                                android:letterSpacing="0.08"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/roboto_regular"
+                                android:textColor="@color/colorBlack"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_viewall_suggestion"
+                            android:text="@string/view_all"
+                            android:textStyle="bold"
+                            android:letterSpacing="0.08"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textColor="@color/colorLightBlue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_gravity="center"
+                        android:id="@+id/recycleview_suggestion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="center_horizontal"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/colorGrey"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/layoutprojects"
+                        android:visibility="gone"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_alignParentStart="true"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_marginEnd="5dp"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/ic_project_icon_colored"
+                                android:contentDescription="TODO" />
+
+                            <TextView
+                                android:text="RECENT PROJECTS"
+                                android:textStyle="bold"
+                                android:letterSpacing="0.08"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/roboto_regular"
+                                android:textColor="@color/colorBlack"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_viewall_projects"
+                            android:text="@string/view_all"
+                            android:textStyle="bold"
+                            android:letterSpacing="0.08"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textColor="@color/colorLightBlue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_gravity="center"
+                        android:id="@+id/recycleview_projects"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="center_horizontal"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/layoutnews"
+                        android:visibility="gone"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_alignParentStart="true"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_marginEnd="5dp"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/ic_news_icon_colored"
+                                android:contentDescription="TODO" />
+
+                            <TextView
+                                android:text="NEWS"
+                                android:textStyle="bold"
+                                android:letterSpacing="0.08"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/roboto_regular"
+                                android:textColor="@color/colorBlack"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_viewall_news"
+                            android:text="@string/view_all"
+                            android:textStyle="bold"
+                            android:letterSpacing="0.08"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textColor="@color/colorLightBlue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycleview_news"
+                        android:layout_gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <View
+                        android:layout_marginTop="5dp"
+                        android:background="@color/searchbackground"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutjobs"
+                    android:background="@color/colorGrey"
+                    android:gravity="center_horizontal"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_alignParentStart="true"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_marginEnd="5dp"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/ic_news_icon_colored"
+                                android:contentDescription="TODO" />
+
+                            <TextView
+                                android:text="RECENT JOBS"
+                                android:textStyle="bold"
+                                android:letterSpacing="0.08"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/roboto_regular"
+                                android:textColor="@color/colorBlack"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_viewall_jobs"
+                            android:text="@string/view_all"
+                            android:textStyle="bold"
+                            android:letterSpacing="0.08"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textColor="@color/colorLightBlue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycleview_jobs"
+                        android:layout_gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/createfab"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:backgroundTint="@color/colorBlue"
+            app:borderWidth="0dp"
+            android:src="@drawable/create_icon_colored_two"
+            android:tint="@color/colorWhite"
+            app:maxImageSize="40dp"
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

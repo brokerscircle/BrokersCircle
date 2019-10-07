@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/searchbg"
+    android:orientation="vertical"
+    tools:context="brokerscirlce.com.fragments.DashboardFiveFragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_height="12dp">
+
+            <View
+                android:background="@color/searchbackground"
+                android:layout_width="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:layout_height="1dp"/>
+
+            <ToggleButton
+                android:id="@+id/showhide"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:padding="0dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:backgroundTint="@color/colorWhite"
+                android:checked="false"
+                android:textSize="10sp"
+                android:text=""
+                android:textOff="Hide Brokers"
+                android:textOn="Show Brokers"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutbrokers"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="BROKERS"
+                        android:layout_alignParentStart="true"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textColor="@color/colorBlack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tv_viewall"
+                        android:text="@string/view_all"
+                        android:layout_alignParentEnd="true"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textColor="@color/colorLightBlue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmer_top_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <include layout="@layout/loading_dashboard_brokers_layout" />
+                    <include layout="@layout/loading_dashboard_brokers_layout" />
+                    <include layout="@layout/loading_dashboard_brokers_layout" />
+                    <include layout="@layout/loading_dashboard_brokers_layout" />
+                    <include layout="@layout/loading_dashboard_brokers_layout" />
+                </LinearLayout>
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginStart="5dp"
+                android:id="@+id/recycle_broker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:background="@color/searchbackground"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_gravity="center"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="24sp"
+                android:textColor="@color/colorBlack"
+                android:text="What do you want to search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_gravity="center"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="14sp"
+                android:textColor="@color/colorBlack"
+                android:text="Select the following category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_marginBottom="15dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/search_property"
+                    android:background="@drawable/rectabglegraywithshadow"
+                    android:orientation="vertical"
+                    android:gravity="bottom|center"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_find_property_icon_colored"/>
+
+                    <TextView
+                        android:text="Property"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/search_projects"
+                    android:background="@drawable/rectabglegraywithshadow"
+                    android:orientation="vertical"
+                    android:gravity="bottom|center"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/project_selector_icon"/>
+
+                    <TextView
+                        android:text="Projects"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/search_brokers"
+                    android:background="@drawable/rectabglegraywithshadow"
+                    android:orientation="vertical"
+                    android:gravity="bottom|center"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_brokers_icon_colored"/>
+
+                    <TextView
+                        android:text="Brokers"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/search_developers"
+                    android:background="@drawable/rectabglegraywithshadow"
+                    android:orientation="vertical"
+                    android:gravity="bottom|center"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_developer_icon_color"/>
+
+                    <TextView
+                        android:text="Developers"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/search_estates"
+                    android:background="@drawable/rectabglegraywithshadow"
+                    android:orientation="vertical"
+                    android:gravity="bottom|center"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_estate_owner_icon_colored"/>
+
+                    <TextView
+                        android:text="Estates"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/search_job_board"
+                    android:background="@drawable/rectabglegraywithshadow"
+                    android:orientation="vertical"
+                    android:gravity="bottom|center"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/jobsiconimage"/>
+
+                    <TextView
+                        android:text="Jobs Board"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

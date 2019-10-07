@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/dashboard_content_one"
+    android:background="@color/colorWhite"
+    tools:context="brokerscirlce.com.Activities.DashboardActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        app:elevation="10dp"
+        android:gravity="center"
+        android:layout_gravity="top"
+        android:layout_height="40dp"
+        android:background="@color/bg_appbar_color">
+
+        <LinearLayout
+            android:weightSum="1.0"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:baselineAligned="false">
+
+            <LinearLayout
+                android:id="@+id/menubtn_layout"
+                android:layout_weight="0.13"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/menuIcon"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_menu"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:contentDescription="TODO" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="0.62"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/layout_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/et_search"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:background="@drawable/round_blue_border"
+                        android:focusable="false"
+                        android:gravity="center_vertical"
+                        android:fontFamily="@font/roboto_regular"
+                        android:drawableStart="@drawable/ic_search_icon_colored"
+                        android:hint="Search Property"
+                        android:textSize="12sp"
+                        android:nextFocusForward="@id/et_password"
+                        android:inputType="text" />
+
+                    <ImageView
+                        android:visibility="gone"
+                        android:layout_alignParentEnd="true"
+                        android:layout_width="40dp"
+                        android:layout_height="30dp"
+                        android:tint="@color/colorWhite"
+                        android:background="@drawable/searchiconbackground"
+                        android:src="@drawable/ic_search_icon"/>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="0.25"
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/img_chat"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginEnd="3dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:scaleType="fitCenter"
+                    android:tint="@color/appbar_chaticon"
+                    android:src="@drawable/ic_chat_icon"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:scaleType="centerCrop"
+                    app:civ_border_width="1dp"
+                    app:civ_border_color="@color/colorBlue"
+                    android:src="@drawable/ic_user_icon_colored"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_marginBottom="?attr/actionBarSize"
+        tools:background="@color/colorWhite"/>
+
+    <!--<com.luseen.spacenavigation.SpaceNavigationView-->
+        <!--android:id="@+id/bottom_navigation"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_gravity="bottom"-->
+        <!--app:space_background_color="@color/colorGrey"-->
+        <!--app:centre_button_color="@color/colorBlue"-->
+        <!--app:centre_button_icon="@drawable/ic_create_icon_colored" />-->
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:elevation="10dp"
+        app:labelVisibilityMode="unlabeled"
+        android:background="@color/bg_bottombar_color"
+        app:menu="@menu/bottom_navigation_menu" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

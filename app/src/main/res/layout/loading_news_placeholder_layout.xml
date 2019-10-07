@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_margin="3dp"
+    android:background="@drawable/rectangleshape"
+    android:padding="3dp"
+    android:layout_height="280dp">
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/shimmerbackground"
+        android:background="@drawable/recangle_blue" />
+
+    <LinearLayout
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        android:background="@drawable/rectanglegrey"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            android:backgroundTint="#EBEBEB"
+            android:background="@drawable/recangle_blue" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_alignParentEnd="true"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:background="@drawable/circlebackground"
+            android:layout_width="@dimen/circleiconsize"
+            android:layout_height="@dimen/circleiconsize">
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:padding="10dp"
+        android:layout_marginBottom="20dp"
+        android:background="#EBEBEB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="70dp"
+            android:layout_height="15dp"
+            android:backgroundTint="@color/shimmerbackground"
+            android:background="@drawable/recangle_blue" />
+
+        <View
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:backgroundTint="@color/shimmerbackground"
+            android:background="@drawable/recangle_blue" />
+
+        <View
+            android:layout_marginTop="5dp"
+            android:layout_width="120dp"
+            android:layout_height="15dp"
+            android:backgroundTint="@color/shimmerbackground"
+            android:background="@drawable/recangle_blue" />
+
+    </LinearLayout>
+
+</RelativeLayout>

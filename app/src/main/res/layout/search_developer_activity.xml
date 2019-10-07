@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/create_background"
+    tools:context="brokerscirlce.com.Activities.Developers.SearchDeveloperActivity">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBlueWithOpacity" />
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        app:elevation="10dp"
+        android:gravity="center"
+        android:layout_gravity="top"
+        android:background="@android:color/transparent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:weightSum="1.0"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_gravity="top"
+            android:layout_width="match_parent"
+            android:divider="@color/colorBlack"
+            android:layout_height="40dp">
+
+            <LinearLayout
+                android:id="@+id/btn_back"
+                android:layout_weight="0.15"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_arrow_back_black_24dp"
+                    android:tint="@color/colorWhite"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="0.6"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Search Developers"
+                    android:fontFamily="@font/roboto_regular"
+                    android:letterSpacing="0.08"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="0.25"
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/btn_chat"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:scaleType="fitCenter"
+                    android:tint="@color/colorWhite"
+                    android:src="@drawable/ic_chat_icon"/>
+
+                <RelativeLayout
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/btn_profile"
+                        android:layout_centerInParent="true"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:scaleType="fitXY"
+                        app:riv_corner_radius="5dp"
+                        android:tint="@color/colorWhite"
+                        app:riv_border_width="1dp"
+                        app:riv_border_color="@color/colorWhite"
+                        android:src="@drawable/ic_user_icon_white"/>
+
+                    <ImageView
+                        android:id="@+id/user_online_icon"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true"
+                        android:padding="0dp"
+                        android:src="@drawable/greendot_icon"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:background="@color/colorWhite"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/frame_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_above="@+id/copyright"
+            android:id="@+id/contents_search"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/job_icon"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="fitXY"
+                android:tint="@color/colorWhite"
+                android:src="@drawable/ic_developers_many_icon"/>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Search Developers"
+                    android:fontFamily="@font/roboto_regular"
+                    android:letterSpacing="0.08"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:text="Find the Developers in your location."
+                android:fontFamily="@font/roboto_regular"
+                android:letterSpacing="0.08"
+                android:textColor="@color/colorWhite"
+                android:textSize="12sp"
+                tools:ignore="HardcodedText" />
+
+            <RelativeLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_title"
+                    android:background="@drawable/round_blue_border"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/textfieldheight"
+                    android:paddingEnd="40dp"
+                    android:paddingStart="40dp"
+                    android:textSize="@dimen/textsizedefault"
+                    android:fontFamily="@font/roboto_regular"
+                    android:hint="Name, keywords"
+                    android:inputType="textPersonName" />
+
+                <ImageView
+                    android:layout_width="@dimen/textfieldiconsize"
+                    android:layout_height="@dimen/textfieldiconsize"
+                    android:tint="@color/colorWhite"
+                    android:src="@drawable/ic_full_name_icon"
+                    android:layout_marginStart="3dp"
+                    android:background="@drawable/circleblue"
+                    android:layout_centerVertical="true"/>
+
+                <ImageView
+                    android:id="@+id/drawable_title"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="@dimen/erroriconsize"
+                    android:layout_height="@dimen/erroriconsize"
+                    android:layout_marginEnd="8dp"
+                    android:tint="@color/colorWhite"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_location"
+                    android:background="@drawable/round_blue_border"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/textfieldheight"
+                    android:paddingEnd="40dp"
+                    android:paddingStart="40dp"
+                    android:textSize="@dimen/textsizedefault"
+                    android:fontFamily="@font/roboto_regular"
+                    android:hint="Location, city, province, country"
+                    android:inputType="textPersonName" />
+
+                <ImageView
+                    android:layout_width="@dimen/textfieldiconsize"
+                    android:layout_height="@dimen/textfieldiconsize"
+                    android:tint="@color/colorWhite"
+                    android:src="@drawable/ic_location_icon"
+                    android:layout_marginStart="3dp"
+                    android:background="@drawable/circleblue"
+                    android:layout_centerVertical="true"/>
+
+                <ImageView
+                    android:id="@+id/drawable_location"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/ic_my_location"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/btn_search"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/round_border_fill_transparent"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/buttonheight">
+
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:text="Search Developer"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/buttontextsizedefault"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="@color/colorWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/copyright"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:layout_margin="20dp"
+            android:gravity="center_horizontal|bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorWhite"
+                android:text="@string/copyright"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="@dimen/copyright_text_size"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorWhite"
+                android:text="@string/domainName"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="@dimen/copyright_text_size"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

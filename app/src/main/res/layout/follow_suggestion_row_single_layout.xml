@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_margin="5dp"
+    android:gravity="center_horizontal"
+    android:background="@drawable/rectangleshape"
+    android:padding="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp">
+
+        <ImageView
+            android:background="@color/colorGrey"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_user_icon_colored"
+            app:civ_border_color="@color/colorWhite"
+            app:civ_border_width="3dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+
+        <ImageView
+            android:src="@drawable/ic_close_black_24dp"
+            android:alpha="0.4"
+            android:layout_alignParentEnd="true"
+            android:tint="@color/colorBlack"
+            android:layout_width="20dp"
+            android:layout_height="20dp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:fadingEdge="horizontal"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:text="Title"
+        android:textStyle="bold"
+        android:letterSpacing="0.06"
+        android:textColor="@color/colorBlack"
+        android:textAlignment="viewStart"
+        android:textSize="15sp" />
+
+    <RatingBar
+        android:id="@+id/rating"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="?android:attr/ratingBarStyleSmall"
+        android:numStars="5"
+        android:progress="3"
+        android:progressBackgroundTint="@color/ratingcolor"
+        android:stepSize="0.1"
+        android:isIndicator="true" />
+
+    <TextView
+        android:id="@+id/tv_company"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:fadingEdge="horizontal"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:text="Company"
+        android:letterSpacing="0.06"
+        android:textColor="@color/colorBlack"
+        android:textAlignment="viewStart"
+        android:textSize="15sp" />
+
+    <ToggleButton
+        android:id="@+id/btn_follow"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:padding="0dp"
+        android:letterSpacing="0.04"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30sp"
+        android:background="@drawable/rectagle_blue_border"
+        android:checked="false"
+        android:fontFamily="@font/roboto_regular"
+        android:textColor="@color/colorBlue"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:text=""
+        android:textOff="Follow"
+        android:textOn="Unfollow"/>
+
+</LinearLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:showIn="navigation_view">
+
+    <item
+        android:id="@+id/nav_search_job"
+        android:icon="@drawable/ic_job_icon"
+        android:title="Search Job" />
+    <item
+        android:id="@+id/nav_find_broker"
+        android:icon="@drawable/ic_brokers_icon_colored"
+        android:title="Search Brokers" />
+    <item
+        android:id="@+id/nav_real_state"
+        android:icon="@drawable/ic_real_state_icon_colored"
+        android:title="Search Real Estates" />
+    <item
+        android:id="@+id/nav_developers"
+        android:icon="@drawable/ic_developer_icon_color"
+        android:title="Search Developers" />
+    <item
+        android:id="@+id/nav_find_property"
+        android:icon="@drawable/ic_find_property_icon_colored"
+        android:title="Search Property" />
+    <item
+        android:id="@+id/nav_suggestion"
+        android:icon="@drawable/ic_user_icon_colored"
+        android:title="Suggestions" />
+    <item
+        android:id="@+id/nav_find_owners"
+        android:icon="@drawable/ic_estate_owner_icon_colored"
+        android:title="Estate Owners" />
+    <item
+        android:id="@+id/nav_favorite"
+        android:icon="@drawable/ic_favorite_icon_colored"
+        android:title="Favorite" />
+    <item
+        android:id="@+id/nav_find_user"
+        android:icon="@drawable/ic_user_icon_colored"
+        android:title="Users" />
+    <item
+        android:id="@+id/nav_maps"
+        android:icon="@drawable/ic_map_icon_colored"
+        android:title="Maps" />
+    <item
+        android:id="@+id/nav_setting"
+        android:icon="@drawable/ic_setting_icon_colored"
+        android:title="Setting" />
+
+</menu>

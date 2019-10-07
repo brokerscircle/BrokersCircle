@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/roboto_regular"
+        android:textSize="12sp"
+        android:textColor="#8A8A8A"
+        android:text="Date"/>
+
+    <LinearLayout
+        android:id="@+id/layout_current_user"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:layout_marginEnd="60dp"
+        android:padding="10dp"
+        android:background="@drawable/messge_rectangle_grey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_current_user_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:textSize="14sp"
+            android:textColor="@color/colorBlack"
+            android:text="Your Message Here"/>
+
+        <TextView
+            android:id="@+id/tv_current_user_time"
+            android:gravity="end"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_marginTop="5dp"
+            android:textSize="14sp"
+            android:textColor="#8A8A8A"
+            android:text="Date"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_message_user"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="60dp"
+        android:layout_gravity="end"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:background="@drawable/message_rectangle_purple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_message_user_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:textSize="14sp"
+            android:textColor="@color/colorWhite"
+            android:text="Your Message Here"/>
+
+        <TextView
+            android:id="@+id/tv_message_user_time"
+            android:gravity="end"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_marginTop="5dp"
+            android:textSize="14sp"
+            android:textColor="@color/colorGrey"
+            android:text="Date"/>
+
+    </LinearLayout>
+
+</LinearLayout>

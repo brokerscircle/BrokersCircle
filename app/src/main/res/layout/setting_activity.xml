@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:coverflow="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="brokerscirlce.com.Activities.SettingActivity">
+
+    <LinearLayout
+        android:background="@color/colorWhite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            app:elevation="10dp"
+            android:backgroundTint="@color/colorGrey"
+            android:gravity="center"
+            android:layout_gravity="top"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|enterAlways"
+            android:background="@color/bg_appbar_color">
+
+            <RelativeLayout
+                android:layout_gravity="top"
+                android:background="@mipmap/create_background"
+                android:layout_width="match_parent"
+                android:layout_height="130dp">
+
+                <View
+                    android:background="@color/colorBlueWithOpacity"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:weightSum="1.0"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:baselineAligned="false">
+
+                        <LinearLayout
+                            android:id="@+id/btn_back"
+                            android:layout_weight="0.13"
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:gravity="center"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_arrow_back_black_24dp"
+                                android:tint="@color/colorWhite"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="0.53"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:text="Setting"
+                                android:fontFamily="@font/roboto_regular"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="15sp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="0.34"
+                            android:orientation="horizontal"
+                            android:layout_width="0dp"
+                            android:gravity="end"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/img_chat"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:tint="@color/colorWhite"
+                                android:src="@drawable/ic_chat_icon"/>
+
+                            <RelativeLayout
+                                android:layout_gravity="center"
+                                android:layout_marginEnd="5dp"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp">
+
+                                <com.makeramen.roundedimageview.RoundedImageView
+                                    android:id="@+id/profile_image"
+                                    android:layout_centerInParent="true"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:scaleType="centerCrop"
+                                    app:riv_corner_radius="5dp"
+                                    app:riv_border_width="1dp"
+                                    app:riv_border_color="@color/colorWhite"
+                                    android:src="@drawable/ic_user_icon_white"/>
+
+                                <ImageView
+                                    android:id="@+id/user_online_icon"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentEnd="true"
+                                    android:padding="0dp"
+                                    android:src="@drawable/greendot_icon"
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"/>
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:background="@color/colorWhite"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp" />
+
+                    <RelativeLayout
+                        android:padding="10dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_gravity="center_vertical"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/tv_user_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="15sp"
+                                android:lines="1"
+                                android:singleLine="true"
+                                android:ellipsize="end"
+                                android:textStyle="bold"
+                                android:marqueeRepeatLimit="marquee_forever"
+                                android:fontFamily="@font/roboto_regular"
+                                android:text="Name " />
+
+                            <TextView
+                                android:id="@+id/tv_real_state"
+                                android:layout_marginTop="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="15sp"
+                                android:lines="1"
+                                android:singleLine="true"
+                                android:ellipsize="end"
+                                android:marqueeRepeatLimit="marquee_forever"
+                                android:fontFamily="@font/roboto_regular"
+                                android:text="Real Estate" />
+
+
+                        </LinearLayout>
+
+                        <Button
+                            android:text="Edit Profile"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="5dp"
+                            android:textColor="@color/colorBlack"
+                            android:gravity="center"
+                            android:layout_gravity="end"
+                            android:paddingBottom="0dp"
+                            android:paddingTop="0dp"
+                            android:backgroundTint="@color/colorGrey"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:textSize="10sp"
+                            android:layout_marginTop="5dp"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:background="@drawable/round_border_fill_transparent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="18dp"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:background="@color/colorBlue"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+<!--            <TextView-->
+<!--                android:id="@+id/tv_dashboard_style"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Dashboard Styles"-->
+<!--                android:drawableStart="@drawable/ic_home_icon_colored"-->
+<!--                android:drawablePadding="15dp"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:padding="10dp"-->
+<!--                android:textSize="15sp"-->
+<!--                android:textColor="@color/colorBlack"-->
+<!--                android:fontFamily="@font/roboto_regular"-->
+<!--                android:letterSpacing="0.05"-->
+<!--                android:drawableEnd="@drawable/ic_angle_selector" />-->
+
+            <ToggleButton
+                android:id="@+id/dashboard_style"
+                android:layout_gravity="center_horizontal"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorWhite"
+                android:textColor="@color/colorBlack"
+                android:fontFamily="@font/roboto_regular"
+                android:letterSpacing="0.05"
+                android:drawableEnd="@drawable/ic_angle_selector"
+                android:drawableStart="@drawable/ic_home_icon"
+                android:drawablePadding="15dp"
+                android:gravity="start|center_vertical"
+                android:checked="false"
+                android:padding="10dp"
+                android:textSize="15sp"
+                android:text="Dashboard Styles"
+                android:textOff="Dashboard Styles"
+                android:textOn="Dashboard Styles"/>
+
+            <LinearLayout
+                android:id="@+id/dashboardchecks"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:id="@+id/dashboard_one_check"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layoutDirection="rtl"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginStart="5dp"
+                    android:padding="10dp"
+                    android:textSize="15sp"
+                    android:alpha="0.6"
+                    android:checked="true"
+                    android:textColor="@color/colorBlack"
+                    android:fontFamily="@font/roboto_regular"
+                    android:letterSpacing="0.05"
+                    android:text="Dashboard One"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:visibility="gone"
+                    android:layout_margin="10dp"
+                    android:id="@+id/recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <CheckBox
+                    android:id="@+id/dashboard_two_check"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layoutDirection="rtl"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginStart="5dp"
+                    android:padding="10dp"
+                    android:textSize="15sp"
+                    android:checked="false"
+                    android:alpha="0.6"
+                    android:textColor="@color/colorBlack"
+                    android:fontFamily="@font/roboto_regular"
+                    android:letterSpacing="0.05"
+                    android:text="Dashboard Two"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:background="@color/colorGrey"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+        <ToggleButton
+            android:id="@+id/toggle_change_password"
+            android:layout_gravity="center_horizontal"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/roboto_regular"
+            android:letterSpacing="0.05"
+            android:drawableEnd="@drawable/ic_arrow_forward"
+            android:drawableStart="@drawable/ic_password_icon"
+            android:drawableTint="@color/colorBlue"
+            android:drawablePadding="15dp"
+            android:gravity="start|center_vertical"
+            android:checked="false"
+            android:padding="10dp"
+            android:textSize="15sp"
+            android:text="Change Password"
+            android:textOff="Change Password"
+            android:textOn="Change Password"/>
+
+        <View
+            android:background="@color/colorGrey"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+        <ToggleButton
+            android:id="@+id/toggle_logout"
+            android:layout_gravity="center_horizontal"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/roboto_regular"
+            android:letterSpacing="0.05"
+            android:drawableEnd="@drawable/ic_arrow_forward"
+            android:drawableStart="@drawable/ic_home_icon"
+            android:drawableTint="@color/colorBlue"
+            android:drawablePadding="15dp"
+            android:gravity="start|center_vertical"
+            android:checked="false"
+            android:padding="10dp"
+            android:textSize="15sp"
+            android:text="Logout"
+            android:textOff="Logout"
+            android:textOn="Logout"/>
+
+    </LinearLayout>
+</ScrollView>

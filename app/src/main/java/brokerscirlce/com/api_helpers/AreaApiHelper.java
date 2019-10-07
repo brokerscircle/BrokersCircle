@@ -1,0 +1,94 @@
+package brokerscirlce.com.api_helpers;
+
+import android.content.Context;
+import android.text.Html;
+import android.util.Log;
+
+import com.android.volley.VolleyError;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import brokerscirlce.com.interfaces.IResult;
+import brokerscirlce.com.model.Area.AreaUtil;
+import brokerscirlce.com.services.VolleyService;
+import brokerscirlce.com.util.Constant;
+
+public class AreaApiHelper {
+
+    private String TAG = "LocationApiHelper";
+    private static final String URL = Constant.BASE_URL+"api/areas/list?app_id="+ Constant.APP_ID+"&app_key="+Constant.APP_KEY;
+
+    //Volley Services
+    private IResult mResultCallback = null;
+    private VolleyService mVolleyService;
+
+    private List<AreaUtil> mAreaList = new ArrayList<>();
+    DataStatus dataStatus;
+    Context mContext;
+
+    public interface DataStatus{
+        void DataIsLoaded(List<AreaUtil> areaUtils);
+    }
+
+    public AreaApiHelper() {
+    }
+
+    public void readAreaList(final DataStatus dataStatus, Context mContext){
+        this.dataStatus = dataStatus;
+this.mContext = mContext;
+
+        //Getting Json from url
+        initVolleyCallback();
+        mVolleyService = new VolleyService(mResultCallback,mContext);
+        mVolleyService.getDataVolley("GETCALL",URL);
+    }
+
+    public void readSingleArea(final DataStatus dataStatus, Context mContext, String id){
+        this.dataStatus = dataStatus;
+this.mContext = mContext;
+
+        //Getting Json from url
+        initVolleyCallback();
+        mVolleyService = new VolleyService(mResultCallback,mContext);
+        mVolleyService.getDataVolley("GETCALL",URL+"&id="+id);
+    }
+
+    public void readAreasByCity(final DataStatus dataStatus, Context mContext, String cityID){
+        this.dataStatus = dataStatus;
+this.mContext = mContext;
+
+        //Getting Json from url
+        initVolleyCallback();
+        mVolleyService = new VolleyService(mResultCallback,mContext);
+        mVolleyService.getDataVolley("GETCALL",URL+"&city_id="+cityID);
+    }
+
+    private void initVolleyCallback() {
+        mResultCallback = new IResult() {
+
+            @Override
+            public void notifySuccess(String requestType,String response) {
+                mAreaList.clear();
+
+                String plain = Html.fromHtml(response).toString();
+                Log.d(TAG, "notifySuccess: "+plain);
+                GsonBuilder gsonBuilder = new GsonBuilder();
+                Gson gson = gsonBuilder.create();
+                AreaUtil[] areaUtil = gson.fromJson(plain, AreaUtil[].class);
+
+                //SETTING DATA TO DATASTATUS
+                mAreaList.add(areaUtil[0]);
+                dataStatus.DataIsLoaded(mAreaList);
+            }
+            @Override
+            public void notifyError(String requestType, VolleyError error) {
+                Log.d(TAG, "Volley requester " + requestType);
+                Log.d(TAG, "Volley JSON post" + "That didn't work!");
+            }
+        };
+    }
+
+}

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F3F3F</color>
+    <color name="colorPrimaryDark">#3F3F3F</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBtnPrimary">#2A326D</color>
+    <color name="colorStatusBar">#5C2726</color>
+    <color name="colorDark">#3F3F3F</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorGreen">#4CBB17</color>
+    <color name="colorLightBlue">#5E4FBD</color>
+    <color name="AppNameColor">#000000</color>
+    <color name="AppSubNameColor">#000000</color>
+    <color name="copyrightTextColor">#FFFFFF</color>
+    <color name="crediantialheadongcolor">#000000</color>
+    <color name="searchbackground">#EAEAEA</color>
+    <color name="searchiconbackground">#2A326D</color>
+    <color name="colorBlue">#2A326D</color>
+    <color name="colorBlueWithOpacity">#B2020E81</color>
+    <color name="colorRed">#FF0707</color>
+    <color name="colorMaroon">#C40B0B</color>
+    <color name="colorGrey">#F3F3F3</color>
+    <color name="colorOFFGrey">#7EF4F4F4</color>
+    <color name="colorDarkGrey">#EAE7DE</color>
+    <color name="circleicontint">#AAA8A8</color>
+    <color name="ratingcolor">#FD4F1C</color>
+    <color name="shimmerbackground">#dddddd</color>
+
+    <!-- ****************************************************************************************************** -->
+
+    <!-- App bar color-->
+    <color name="bg_appbar_color">#FFFFFF</color>
+    <color name="appbar_actionicon_color">#000000</color>
+    <color name="appbar_chaticon">#2A326D</color>
+
+    <!-- End App bar color-->
+
+<!-- ****************************************************************************************************** -->
+
+    <!-- Bottom bar color-->
+    <color name="bg_bottombar_color">#FFFFFF</color>
+    <color name="item_icon_tint">#000000</color>
+    <color name="item_text_color">#000000</color>
+
+    <!-- Bottom App bar color-->
+
+    <!-- ****************************************************************************************************** -->
+
+    <!-- Tab bar color-->
+    <color name="tabs_bg">#FFFFFF</color>
+    <color name="tab_selected_text_color">#FFFFFF</color>
+    <color name="tab_indicator_color">#FF0707</color>
+
+    <!-- Bottom App bar color-->
+
+    <!-- ****************************************************************************************************** -->
+    <!-- Intro Screens background color-->
+    <color name="bg_intro">#FFFFFF</color>
+    <!-- Intro Screens background color-->
+    <color name="intro_heading">#333333</color>
+    <!-- Intro Screens background color-->
+    <color name="intro_subtext">#6C6C6C</color>
+    <!-- dots inactive colors -->
+    <color name="dot_grey_inactive">#A7A7A7</color>
+    <!-- dots active colors -->
+    <color name="dot_blue_active">#2E0F88</color>
+    <!-- End Intro Screens background color-->
+
+
+
+</resources>

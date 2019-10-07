@@ -1,0 +1,6 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable = "@drawable/ic_web_icon_colored"
+        android:state_checked="true"/>
+    <item android:drawable="@drawable/ic_web_icon"
+        android:state_checked="false"/>
+</selector>
