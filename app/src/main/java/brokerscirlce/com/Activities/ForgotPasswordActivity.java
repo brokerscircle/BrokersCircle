@@ -27,7 +27,9 @@ import com.google.gson.GsonBuilder;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import brokerscirlce.com.R;
 import brokerscirlce.com.adapters.DropDownSuggestionsArrayAdapters.PhoneCountryCodeArrayAdapter;
@@ -234,16 +236,13 @@ public class ForgotPasswordActivity extends AppCompatActivity implements View.On
         String phone = et_phone.getText().toString().trim();
         initVolleyCallback();
         mVolleyService = new VolleyService(mResultCallback,this);
-        JSONObject sendObj = null;
-        try {
-            sendObj = new JSONObject();
-            sendObj.put("country_code_id", codeid);
-            sendObj.put("number", phone);
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        Log.d(TAG, "forgotPasswordUser: "+sendObj+" Url "+forgotPasswordUrl);
-        mVolleyService.postDataVolley("POSTCALL", forgotPasswordUrl, sendObj);
+
+        Map<String, String> map = new HashMap<>();
+        map.put("country_code_id", codeid);
+        map.put("number", phone);
+
+        Log.d(TAG, "forgotPasswordUser: "+map+" Url "+forgotPasswordUrl);
+        mVolleyService.postDataVolley("POSTCALL", forgotPasswordUrl, map);
     }
 
     void initVolleyCallback(){

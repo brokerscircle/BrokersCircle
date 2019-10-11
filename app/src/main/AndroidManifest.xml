@@ -11,6 +11,9 @@
         android:roundIcon="@mipmap/ic_logo_round"
         android:supportsRtl="true"
         android:theme="@style/baseTheme">
+
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+
         <activity android:name="brokerscirlce.com.Activities.ChangePassword.ChangePasswordVerificationActivity"
             android:screenOrientation="portrait" />
         <activity android:name="brokerscirlce.com.Activities.ChangePassword.ChangePasswordActivity"

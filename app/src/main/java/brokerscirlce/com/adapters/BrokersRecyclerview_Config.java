@@ -144,18 +144,20 @@ public class BrokersRecyclerview_Config {
             new MasterDatabaseHelper().readMasterByReference_ID_AND_RefType(new MasterDatabaseHelper.DataStatus() {
                 @Override
                 public void DataIsLoaded(List<MasterData> masterData) {
-                    new UsersDatabaseHelper().readSingleUserList(new UsersDatabaseHelper.DataStatus() {
-                        @Override
-                        public void DataIsLoaded(List<UsersData> usersData) {
-                            if (!usersData.get(0).getCompanyName().equals("") && usersData.get(0).getCompanyName() != null){
-                                mEstateNameTV.setText(usersData.get(0).getCompanyName());
-                            }else {
-                                mEstateNameTV.setVisibility(View.GONE);
+                    if(!masterData.isEmpty()){
+                        new UsersDatabaseHelper().readSingleUserList(new UsersDatabaseHelper.DataStatus() {
+                            @Override
+                            public void DataIsLoaded(List<UsersData> usersData) {
+                                if (!usersData.get(0).getCompanyName().equals("") && usersData.get(0).getCompanyName() != null){
+                                    mEstateNameTV.setText(usersData.get(0).getCompanyName());
+                                }else {
+                                    mEstateNameTV.setVisibility(View.GONE);
+                                }
                             }
-                        }
-                    }, mContext, masterData.get(0).getUserId());
+                        }, mContext, masterData.get(0).getUserId());
+                    }
                 }
-            },mContext, brokersData.getId(),"Owner");
+            },mContext, brokersData.getId(),"Broker");
 
 //            if (!brokersData.getRealEstateName().equals("") && brokersData.getRealEstateName() != null){
 //                mEstateNameTV.setText(brokersData.getRealEstateName());
@@ -185,6 +187,7 @@ public class BrokersRecyclerview_Config {
             }else {
                 mTotalBuyTV.setText("Buy: 0");
             }
+
             //Sell Count
             if (brokersData.getNoOfSell() != null && !brokersData.getNoOfSell().equals("")){
                 mTotalSellTV.setText(String.format("Sell: %s", brokersData.getNoOfSell()));
@@ -234,7 +237,7 @@ public class BrokersRecyclerview_Config {
 
             //Number of Followers
             if (brokersData.getNoOfFollowers() != null && !brokersData.getNoOfFollowers().equals("")){
-                int followers = (int) brokersData.getNoOfFollowers();
+                int followers = Integer.parseInt(brokersData.getNoOfFollowers().toString());
                 String followerSting = (followers > 1)? followers+" Followers" : followers+" Follower";
                 mFollowesTV.setText(followerSting);
             }else{

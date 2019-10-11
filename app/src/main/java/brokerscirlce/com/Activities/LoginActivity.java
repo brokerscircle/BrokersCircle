@@ -22,6 +22,9 @@ import com.google.gson.GsonBuilder;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import brokerscirlce.com.R;
 import brokerscirlce.com.interfaces.IResult;
 import brokerscirlce.com.model.login_user.LoginUser;
@@ -34,7 +37,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private static final String TAG = "LoginActivity";
     private Helper helper;
     //Volley services
-    String loginURL = Constant.BASE_URL+"api/oauth/token";
+    String loginURL = Constant.BASE_URL+"api/oauth/token?";
     IResult mResultCallback = null;
     VolleyService mVolleyService;
 
@@ -158,17 +161,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         initVolleyCallback();
         mVolleyService = new VolleyService(mResultCallback,this);
-        JSONObject sendObj = null;
-        try {
-            sendObj = new JSONObject();
-            sendObj.put("email", userEmail);
-            sendObj.put("password", userPassword);
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        Log.d(TAG, "signInUser: "+sendObj+" Url "+loginURL);
-        mVolleyService.postDataVolley("POSTCALL", loginURL, sendObj);
 
+        Map<String, String> map = new HashMap<>();
+        map.put("email", userEmail);
+        map.put("password", userPassword);
+
+        Log.d(TAG, "signInUser: "+map+" Url "+loginURL);
+        mVolleyService.postDataVolley("POSTCALL", loginURL, map);
     }
 
     void initVolleyCallback(){

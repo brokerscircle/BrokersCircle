@@ -19,6 +19,7 @@ import brokerscirlce.com.adapters.BrokersRecyclerview_Config;
 import brokerscirlce.com.api_helpers.BrokersDatabaseHelper;
 import brokerscirlce.com.api_helpers.FollowersDatabaseHelper;
 import brokerscirlce.com.model.Brokers.BrokersData;
+import brokerscirlce.com.model.Followers.FollowPostResponseUtils;
 import brokerscirlce.com.model.Followers.FollowersData;
 import brokerscirlce.com.R;
 
@@ -30,7 +31,7 @@ public class ProfileFollowersActivity extends AppCompatActivity implements PullR
     private LinearLayout mBackButton;
 
     String userId = "";
-    String followType = "BrokerToBroker";
+    String followType = "UserToBroker";
     List<BrokersData> brokersDataList = new ArrayList<>();
 
     @Override
@@ -82,6 +83,16 @@ public class ProfileFollowersActivity extends AppCompatActivity implements PullR
                         }
                     }, ProfileFollowersActivity.this);
                 }
+
+                @Override
+                public void DataIsPosted(List<FollowPostResponseUtils> responseUtils) {
+
+                }
+
+                @Override
+                public void DataIsDeleted(List<FollowPostResponseUtils> usersData) {
+
+                }
             }, ProfileFollowersActivity.this, userId, followType);
         }
 
@@ -124,6 +135,16 @@ public class ProfileFollowersActivity extends AppCompatActivity implements PullR
                             }
                         }
                     }, ProfileFollowersActivity.this);
+                }
+
+                @Override
+                public void DataIsPosted(List<FollowPostResponseUtils> responseUtils) {
+
+                }
+
+                @Override
+                public void DataIsDeleted(List<FollowPostResponseUtils> usersData) {
+
                 }
             }, ProfileFollowersActivity.this, userId, followType);
         }

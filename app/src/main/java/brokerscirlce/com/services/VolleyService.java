@@ -1,6 +1,8 @@
 package brokerscirlce.com.services;
 
 import android.content.Context;
+import android.util.Log;
+import android.widget.Toast;
 
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
@@ -12,6 +14,9 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
 import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import brokerscirlce.com.interfaces.IResult;
 
@@ -49,27 +54,76 @@ public class VolleyService {
         }
     }
 
-    public void postDataVolley(final String requestType, String url, JSONObject sendObj){
+    public void postDataVolley(final String requestType, String url, Map<String,String> params){
         try {
-            RequestQueue queue = Volley.newRequestQueue(mContext);
 
-            JsonObjectRequest jsonObj = new JsonObjectRequest(Request.Method.POST,url,sendObj, new Response.Listener<JSONObject>() {
+            StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
+                    new Response.Listener<String>() {
+                        @Override
+                        public void onResponse(String response) {
+                            if(mResultCallback != null)
+                                mResultCallback.notifySuccess(requestType, response);
+                            Toast.makeText(mContext,response,Toast.LENGTH_LONG).show();
+                            Log.d("VolleyService", "onResponse BrokerProfileActivity: "+response);
+                            //parseData(response);
+                        }
+                    },
+                    new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+                            if(mResultCallback != null)
+                                mResultCallback.notifyError(requestType, error);
+                            Toast.makeText(mContext,error.toString(),Toast.LENGTH_LONG).show();
+                        }
+                    }){
                 @Override
-                public void onResponse(JSONObject response) {
-                    if(mResultCallback != null)
-                        mResultCallback.notifySuccess(requestType,response.toString());
+                protected Map<String,String> getParams(){
+                    return params;
                 }
-            }, new Response.ErrorListener() {
+
+            };
+
+            RequestQueue requestQueue = Volley.newRequestQueue(mContext);
+            requestQueue.add(stringRequest);
+
+        }catch(Exception ignored){
+
+        }
+    }
+
+    public void deleteDataVolley(final String requestType, String url, Map<String,String> params){
+        try {
+
+            StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
+                    new Response.Listener<String>() {
+                        @Override
+                        public void onResponse(String response) {
+                            if(mResultCallback != null)
+                                mResultCallback.notifySuccess(requestType, response);
+                            Toast.makeText(mContext,response,Toast.LENGTH_LONG).show();
+                            Log.d("VolleyService", "onResponse BrokerProfileActivity: "+response);
+                            //parseData(response);
+                        }
+                    },
+                    new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+                            if(mResultCallback != null)
+                                mResultCallback.notifyError(requestType, error);
+                            Toast.makeText(mContext,error.toString(),Toast.LENGTH_LONG).show();
+                        }
+                    }){
                 @Override
-                public void onErrorResponse(VolleyError error) {
-                    if(mResultCallback != null)
-                        mResultCallback.notifyError(requestType,error);
+                protected Map<String,String> getParams(){
+                    return params;
                 }
-            });
 
-            queue.add(jsonObj);
+            };
 
-        }catch(Exception e){
+            RequestQueue requestQueue = Volley.newRequestQueue(mContext);
+            requestQueue.add(stringRequest);
+
+        }catch(Exception ignored){
 
         }
     }

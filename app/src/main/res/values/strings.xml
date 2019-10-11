@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">Brokers Cirlce</string>
-    <string name="domainName">www.brokerscirlce.com</string>
-    <string name="copyright">Copyright © 2019 BrokersCirlce</string>
+    <string name="app_name">Brokers Circle</string>
+    <string name="domainName">www.brokerscircle.com</string>
+    <string name="copyright">Copyright © 2019 BrokersCircle</string>
     <string name="already_account">Have an account</string>
     <string name="enter_account_info">Enter your credentials</string>
     <string name="createaccount">Create an account</string>

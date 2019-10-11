@@ -33,7 +33,9 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import brokerscirlce.com.R;
 import brokerscirlce.com.adapters.DropDownSuggestionsArrayAdapters.CityArrayAdapter;
@@ -1038,32 +1040,28 @@ public class SignUpStepOneActivity extends AppCompatActivity implements View.OnC
 
         initVolleyCallback();
         mVolleyService = new VolleyService(mResultCallback,this);
-        JSONObject sendObj = null;
-        try {
-            sendObj = new JSONObject();
-            sendObj.put("company_id", companyid);
-            sendObj.put("country_code_id", phonecodeid);
-            sendObj.put("full_name", name);
-            sendObj.put("username", username);
-            sendObj.put("slug", username);
-            sendObj.put("email", email);
-            sendObj.put("mobile_no", phone);
-            sendObj.put("password", password);
-            sendObj.put("status", "Active");
-            sendObj.put("country_id", countryid);
-            sendObj.put("provence_id", provinceid);
-            sendObj.put("city_id", cityid);
-            sendObj.put("area_id", areaid);
-            sendObj.put("location_id", locationid);
-            sendObj.put("account_type", accountType);
-            sendObj.put("gender", gender);
-            sendObj.put("date_of_birth", dateofbirth);
-            sendObj.put("cnic_no", cnic);
-            sendObj.put("postal_code", postalcode);
-            sendObj.put("contact_address", address);
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
+
+        Map<String, String> sendObj = new HashMap<>();
+        sendObj.put("company_id", companyid);
+        sendObj.put("country_code_id", phonecodeid);
+        sendObj.put("full_name", name);
+        sendObj.put("username", username);
+        sendObj.put("slug", username);
+        sendObj.put("email", email);
+        sendObj.put("mobile_no", phone);
+        sendObj.put("password", password);
+        sendObj.put("status", "Active");
+        sendObj.put("country_id", countryid);
+        sendObj.put("provence_id", provinceid);
+        sendObj.put("city_id", cityid);
+        sendObj.put("area_id", areaid);
+        sendObj.put("location_id", locationid);
+        sendObj.put("account_type", accountType);
+        sendObj.put("gender", gender);
+        sendObj.put("date_of_birth", dateofbirth);
+        sendObj.put("cnic_no", cnic);
+        sendObj.put("postal_code", postalcode);
+        sendObj.put("contact_address", address);
         Log.d(TAG, "signInUser: "+sendObj+" Url "+signUPURL);
         mVolleyService.postDataVolley("POSTCALL", signUPURL, sendObj);
 

@@ -17,6 +17,9 @@ import com.android.volley.VolleyError;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import brokerscirlce.com.R;
 import brokerscirlce.com.interfaces.IResult;
 import brokerscirlce.com.model.login_user.LoginUser;
@@ -103,16 +106,12 @@ public class ForgotPasswordCodeActivity extends AppCompatActivity implements Vie
 
         initVolleyCallback();
         mVolleyService = new VolleyService(mResultCallback,this);
-        JSONObject sendObj = null;
-        try {
-            sendObj = new JSONObject();
-            sendObj.put("id", id);
-            sendObj.put("code", code);
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        Log.d(TAG, "forgotPasswordUser: "+sendObj+" Url "+forgotPasswordUrl);
-        mVolleyService.postDataVolley("POSTCALL", forgotPasswordUrl, sendObj);
+        Map<String, String> map = new HashMap<>();
+        map.put("id", id);
+        map.put("code", code);
+
+        Log.d(TAG, "forgotPasswordUser: "+map+" Url "+forgotPasswordUrl);
+        mVolleyService.postDataVolley("POSTCALL", forgotPasswordUrl, map);
     }
 
     void initVolleyCallback(){
