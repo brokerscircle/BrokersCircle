@@ -6,7 +6,7 @@
     android:background="@color/colorWhite"
     android:orientation="vertical"
     android:layout_marginTop="5dp"
-    tools:context="brokerscirlce.com.fragments.TabsFragments.ProfileTabs.ProfilePastDealingTabFragment">
+    tools:context="brokerscircle.com.fragments.TabsFragments.ProfileTabs.ProfilePastDealingTabFragment">
 
     <com.facebook.shimmer.ShimmerFrameLayout
         android:id="@+id/shimmer_view_container"

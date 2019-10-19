@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:id="@+id/dashboard_content_one"
     android:background="@color/colorGrey"
-    tools:context="brokerscirlce.com.Activities.DashboardActivityTwo">
+    tools:context="brokerscircle.com.Activities.DashboardActivityTwo">
 
     <FrameLayout
         android:id="@+id/frame_container"

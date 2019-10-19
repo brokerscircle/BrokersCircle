@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@mipmap/searchbg"
     android:orientation="vertical"
-    tools:context="brokerscirlce.com.fragments.DashboardFiveFragment">
+    tools:context="brokerscircle.com.fragments.DashboardFiveFragment">
 
     <LinearLayout
         android:orientation="vertical"

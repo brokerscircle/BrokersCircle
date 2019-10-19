@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorOFFGrey"
     android:orientation="vertical"
-    tools:context="brokerscirlce.com.fragments.TabsFragments.Dashboard.DashboardOneTabs.D1RentTabFragment">
+    tools:context="brokerscircle.com.fragments.TabsFragments.Dashboard.DashboardOneTabs.D1RentTabFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycle_lease_property"

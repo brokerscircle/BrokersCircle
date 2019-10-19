@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorWhite"
-    tools:context="brokerscirlce.com.Activities.Properties.ListPropertyOptions">
+    tools:context="brokerscircle.com.Activities.Properties.ListPropertyOptions">
 
     <LinearLayout
         android:weightSum="1.0"

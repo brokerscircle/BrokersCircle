@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorWhite"
     android:orientation="vertical"
-    tools:context="brokerscirlce.com.fragments.TabsFragments.ProfileTabs.ProfileListingTab">
+    tools:context="brokerscircle.com.fragments.TabsFragments.ProfileTabs.ProfileListingTab">
 
     <com.facebook.shimmer.ShimmerFrameLayout
         android:id="@+id/shimmer_view_container"

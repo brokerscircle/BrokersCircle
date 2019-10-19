@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="brokerscirlce.com.Activities.Estates.ViewAllOwnersEstateActivity">
+    tools:context="brokerscircle.com.Activities.Estates.ViewAllOwnersEstateActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar"
@@ -227,7 +227,7 @@
 
                 <fragment
                     android:id="@+id/map"
-                    class="brokerscirlce.com.Views.MapFragment"
+                    class="brokerscircle.com.Views.MapFragment"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
 

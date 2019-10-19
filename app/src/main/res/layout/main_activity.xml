@@ -5,7 +5,7 @@
     android:background="@mipmap/cloud"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="brokerscirlce.com.Activities.MainActivity">
+    tools:context="brokerscircle.com.Activities.MainActivity">
 
     <ImageView
         android:alpha="0.5"

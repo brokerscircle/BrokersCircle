@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="@color/colorWhite"
-    tools:context="brokerscirlce.com.fragments.TabsFragments.DeveloperTabs.DeveloperOffPlanTabFragment">
+    tools:context="brokerscircle.com.fragments.TabsFragments.DeveloperTabs.DeveloperOffPlanTabFragment">
 
     <View
         android:background="@color/searchbackground"

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorWhite"
     android:orientation="vertical"
-    tools:context="brokerscirlce.com.Activities.MapActivity">
+    tools:context="brokerscircle.com.Activities.MapActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar"

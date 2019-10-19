@@ -7,7 +7,7 @@
     android:id="@+id/scrolllayout"
     android:fillViewport="true"
     android:background="@mipmap/cloud"
-    tools:context="brokerscirlce.com.Activities.SignUpStepOneActivity">
+    tools:context="brokerscircle.com.Activities.SignUpStepOneActivity">
 
     <ImageView
         android:alpha="0.5"

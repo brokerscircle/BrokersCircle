@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorWhite"
-    tools:context="brokerscirlce.com.Activities.JobBroard.CreateJobsActivity">
+    tools:context="brokerscircle.com.Activities.JobBroard.CreateJobsActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -175,10 +175,9 @@
 
             </RelativeLayout>
 
-            <!-- Step One Contents -->
+            <!-- Step Two Contents -->
             <LinearLayout
-                android:id="@+id/content_step_one"
-                android:paddingTop="20dp"
+                android:id="@+id/content_step_two"
                 android:visibility="visible"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
@@ -186,6 +185,7 @@
 
                 <LinearLayout
                     android:id="@+id/layout_more_options"
+                    android:layout_marginTop="20dp"
                     android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
@@ -229,123 +229,7 @@
 
                     </HorizontalScrollView>
 
-                    <RelativeLayout
-                        android:layout_marginTop="20dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <View
-                            android:layout_centerInParent="true"
-                            android:background="@color/colorDarkGrey"
-                            android:layout_width="match_parent"
-                            android:layout_height="2dp"/>
-
-                        <TextView
-                            android:background="@color/colorWhite"
-                            android:text="Audio"
-                            android:layout_centerVertical="true"
-                            android:paddingStart="20dp"
-                            android:paddingEnd="10dp"
-                            android:textColor="@color/colorBlack"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
-
-                    </RelativeLayout>
-
-                    <RelativeLayout
-                        android:layout_marginBottom="20dp"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginEnd="20dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <EditText
-                            android:id="@+id/et_language"
-                            android:background="@drawable/round_blue_border"
-                            android:layout_width="match_parent"
-                            android:layout_height="35dp"
-                            android:paddingEnd="40dp"
-                            android:paddingStart="40dp"
-                            android:textSize="@dimen/textsizedefault"
-                            android:fontFamily="@font/roboto_regular"
-                            android:hint="Select Language"
-                            android:inputType="textPersonName" />
-
-                        <ImageView
-                            android:layout_width="@dimen/textfieldiconsize"
-                            android:layout_height="@dimen/textfieldiconsize"
-                            android:tint="@color/colorWhite"
-                            android:src="@drawable/ic_language_icon"
-                            android:layout_marginStart="3dp"
-                            android:background="@drawable/circleblue"
-                            android:layout_centerVertical="true"/>
-
-
-                    </RelativeLayout>
-
-                    <RelativeLayout
-                        android:layout_margin="20dp"
-                        android:padding="20dp"
-                        android:layout_gravity="center"
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <ImageView
-                            android:layout_centerHorizontal="true"
-                            android:background="@drawable/circleblue"
-                            android:src="@drawable/ic_create_voice_icon"
-                            android:tint="@color/colorWhite"
-                            android:padding="20dp"
-                            android:layout_width="100dp"
-                            android:adjustViewBounds="true"
-                            android:layout_height="100dp"/>
-
-                    </RelativeLayout>
-
                 </LinearLayout>
-
-                <RelativeLayout
-                    android:id="@+id/btn_next"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="20dp"
-                    android:layout_marginStart="20dp"
-                    android:background="@drawable/round_blue"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/buttonheight">
-
-                    <TextView
-                        android:layout_centerInParent="true"
-                        android:text="Next"
-                        android:textStyle="bold"
-                        android:textSize="@dimen/buttontextsizedefault"
-                        android:fontFamily="@font/roboto_regular"
-                        android:textColor="@color/colorWhite"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-                    <ImageView
-                        android:layout_alignParentEnd="true"
-                        android:layout_width="@dimen/buttoniconsize"
-                        android:layout_height="@dimen/buttoniconsize"
-                        android:src="@drawable/ic_arrow_forward"
-                        android:background="@drawable/circlegreen"
-                        android:backgroundTint="@color/colorWhite"
-                        android:layout_centerVertical="true"/>
-
-                </RelativeLayout>
-
-            </LinearLayout>
-            <!-- Step One Contents End -->
-
-            <!-- Step Two Contents -->
-            <LinearLayout
-                android:id="@+id/content_step_two"
-                android:visibility="gone"
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
 
                 <RelativeLayout
                     android:layout_marginStart="20dp"
@@ -728,76 +612,35 @@
 
                 </LinearLayout>
 
-                <LinearLayout
+                <RelativeLayout
+                    android:id="@+id/btn_next"
                     android:layout_marginTop="20dp"
-                    android:layout_marginStart="20dp"
                     android:layout_marginEnd="20dp"
-                    android:gravity="center"
-                    android:orientation="horizontal"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/round_blue"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="@dimen/buttonheight">
 
-                    <RelativeLayout
-                        android:id="@+id/btn_prev_two"
-                        android:layout_marginEnd="5dp"
-                        android:background="@drawable/round_blue"
-                        android:layout_weight="0.5"
-                        android:layout_width="0dp"
-                        android:layout_height="@dimen/buttonheight">
+                    <TextView
+                        android:layout_centerInParent="true"
+                        android:text="Next"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/buttontextsizedefault"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textColor="@color/colorWhite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
 
-                        <TextView
-                            android:layout_centerInParent="true"
-                            android:text="PREV"
-                            android:textStyle="bold"
-                            android:textSize="@dimen/buttontextsizedefault"
-                            android:fontFamily="@font/roboto_regular"
-                            android:textColor="@color/colorWhite"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
+                    <ImageView
+                        android:layout_alignParentEnd="true"
+                        android:layout_width="@dimen/buttoniconsize"
+                        android:layout_height="@dimen/buttoniconsize"
+                        android:src="@drawable/ic_arrow_forward"
+                        android:background="@drawable/circlegreen"
+                        android:backgroundTint="@color/colorWhite"
+                        android:layout_centerVertical="true"/>
 
-                        <ImageView
-                            android:layout_alignParentStart="true"
-                            android:layout_width="@dimen/buttoniconsize"
-                            android:layout_height="@dimen/buttoniconsize"
-                            android:layout_marginStart="5dp"
-                            android:src="@drawable/ic_arrow_back_black_24dp"
-                            android:background="@drawable/circlegreen"
-                            android:backgroundTint="@color/colorWhite"
-                            android:layout_centerVertical="true"/>
-
-                    </RelativeLayout>
-
-                    <RelativeLayout
-                        android:id="@+id/btn_next_two"
-                        android:layout_margin="5dp"
-                        android:background="@drawable/round_blue"
-                        android:layout_weight="0.5"
-                        android:layout_width="0dp"
-                        android:layout_height="@dimen/buttonheight">
-
-                        <TextView
-                            android:layout_centerInParent="true"
-                            android:text="NEXT"
-                            android:textStyle="bold"
-                            android:textSize="@dimen/buttontextsizedefault"
-                            android:fontFamily="@font/roboto_regular"
-                            android:textColor="@color/colorWhite"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
-
-                        <ImageView
-                            android:layout_alignParentEnd="true"
-                            android:layout_width="@dimen/buttoniconsize"
-                            android:layout_height="@dimen/buttoniconsize"
-                            android:layout_marginEnd="5dp"
-                            android:src="@drawable/ic_arrow_forward"
-                            android:background="@drawable/circlegreen"
-                            android:backgroundTint="@color/colorWhite"
-                            android:layout_centerVertical="true"/>
-
-                    </RelativeLayout>
-
-                </LinearLayout>
+                </RelativeLayout>
 
             </LinearLayout>
             <!-- Step Two Contents End -->
@@ -1199,7 +1042,7 @@
 
                 <fragment
                     android:id="@+id/map"
-                    class="brokerscirlce.com.Views.MapFragment"
+                    class="brokerscircle.com.Views.MapFragment"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
 

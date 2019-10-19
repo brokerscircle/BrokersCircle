@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     android:background="@color/colorWhite"
     android:orientation="vertical"
-    tools:context="brokerscirlce.com.fragments.TabsFragments.ProfileTabs.ProfileReviewTabFragment">
+    tools:context="brokerscircle.com.fragments.TabsFragments.ProfileTabs.ProfileReviewTabFragment">
 
     <include layout="@layout/reviews_layout"/>
 

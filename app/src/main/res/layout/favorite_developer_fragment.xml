@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="brokerscirlce.com.fragments.TabsFragments.FavoriteTabs.FavoriteDeveloperFragment">
+    tools:context="brokerscircle.com.fragments.TabsFragments.FavoriteTabs.FavoriteDeveloperFragment">
 
     <com.facebook.shimmer.ShimmerFrameLayout
         android:id="@+id/shimmer_view_container"

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorWhite"
-    tools:context="brokerscirlce.com.Activities.JobBroard.CreateJobsActivity">
+    tools:context="brokerscircle.com.Activities.JobBroard.CreateJobsActivity">
 
     <ScrollView
         android:layout_width="match_parent"

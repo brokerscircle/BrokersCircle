@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:fitsSystemWindows="true"
     android:background="@color/colorWhite"
-    tools:context="brokerscirlce.com.Activities.Brokers.BrokerProfileActivity">
+    tools:context="brokerscircle.com.Activities.Brokers.BrokerProfileActivity">
 
     <LinearLayout
         android:weightSum="1.0"

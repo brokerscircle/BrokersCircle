@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@mipmap/create_background"
-    tools:context="brokerscirlce.com.Activities.Developers.SearchDeveloperActivity">
+    tools:context="brokerscircle.com.Activities.Developers.SearchDeveloperActivity">
 
     <View
         android:layout_width="match_parent"

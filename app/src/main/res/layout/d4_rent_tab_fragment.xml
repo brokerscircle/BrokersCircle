@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorOFFGrey"
     android:orientation="vertical"
-    tools:context="brokerscirlce.com.fragments.TabsFragments.Dashboard.DashboardFourTabs.D4RentTabFragment">
+    tools:context="brokerscircle.com.fragments.TabsFragments.Dashboard.DashboardFourTabs.D4RentTabFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview"

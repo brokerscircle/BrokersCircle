@@ -5,7 +5,7 @@
     android:background="@mipmap/gradiant_image_three"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="brokerscirlce.com.Activities.InComing_Call_Activity">
+    tools:context="brokerscircle.com.Activities.InComing_Call_Activity">
 
 
     <ImageView

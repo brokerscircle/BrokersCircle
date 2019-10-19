@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="brokerscirlce.com">
+    package="brokerscircle.com">
 
     <application
         android:allowBackup="true"
@@ -14,29 +14,29 @@
 
         <uses-library android:name="org.apache.http.legacy" android:required="false"/>
 
-        <activity android:name="brokerscirlce.com.Activities.ChangePassword.ChangePasswordVerificationActivity"
+        <activity android:name="brokerscircle.com.Activities.ChangePassword.ChangePasswordVerificationActivity"
             android:screenOrientation="portrait" />
-        <activity android:name="brokerscirlce.com.Activities.ChangePassword.ChangePasswordActivity"
+        <activity android:name="brokerscircle.com.Activities.ChangePassword.ChangePasswordActivity"
             android:screenOrientation="portrait" />
-        <activity android:name="brokerscirlce.com.Activities.Properties.PropertySearchActivity"
+        <activity android:name="brokerscircle.com.Activities.Properties.PropertySearchActivity"
             android:screenOrientation="portrait" />
-        <activity android:name="brokerscirlce.com.Activities.Brokers.SearchBrokerActivity"
+        <activity android:name="brokerscircle.com.Activities.Brokers.SearchBrokerActivity"
             android:screenOrientation="portrait" />
-        <activity android:name="brokerscirlce.com.Activities.Developers.SearchDeveloperActivity"
+        <activity android:name="brokerscircle.com.Activities.Developers.SearchDeveloperActivity"
             android:screenOrientation="portrait" />
-        <activity android:name="brokerscirlce.com.Activities.Estates.SearchEstateActivity"
+        <activity android:name="brokerscircle.com.Activities.Estates.SearchEstateActivity"
             android:screenOrientation="portrait" />
-        <activity android:name="brokerscirlce.com.Activities.Get_Direction_Activity"
+        <activity android:name="brokerscircle.com.Activities.Get_Direction_Activity"
             android:screenOrientation="portrait" />
-        <activity android:name="brokerscirlce.com.Activities.JobBroard.JobSearchResultActivity"
+        <activity android:name="brokerscircle.com.Activities.JobBroard.JobSearchResultActivity"
             android:screenOrientation="portrait" />
-        <activity android:name="brokerscirlce.com.Activities.JobBroard.Search_Job_Activity"
+        <activity android:name="brokerscircle.com.Activities.JobBroard.Search_Job_Activity"
             android:screenOrientation="portrait" />
-        <activity android:name="brokerscirlce.com.Activities.MoreFilterActivity"
+        <activity android:name="brokerscircle.com.Activities.MoreFilterActivity"
             android:screenOrientation="portrait" />
-        <activity android:name="brokerscirlce.com.Activities.Properties.ListPropertyAdvance"
+        <activity android:name="brokerscircle.com.Activities.Properties.ListPropertyAdvance"
             android:screenOrientation="portrait" />
-        <activity android:name="brokerscirlce.com.Activities.Properties.ListVoiceProperty"
+        <activity android:name="brokerscircle.com.Activities.Properties.ListVoiceProperty"
             android:screenOrientation="portrait" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -46,104 +46,104 @@
              sign the APK for publishing.
              You can define the keys for the debug and release targets in src/debug/ and src/release/.
         -->
-        <activity android:name="brokerscirlce.com.Activities.DashboardActivityTwo"
+        <activity android:name="brokerscircle.com.Activities.DashboardActivityTwo"
             android:screenOrientation="portrait" />
-        <activity android:name="brokerscirlce.com.Activities.ForgotPasswordChangeActivity"
+        <activity android:name="brokerscircle.com.Activities.ForgotPasswordChangeActivity"
             android:screenOrientation="portrait" />
-        <activity android:name="brokerscirlce.com.Activities.InComing_Call_Activity"
+        <activity android:name="brokerscircle.com.Activities.InComing_Call_Activity"
             android:screenOrientation="portrait" />
-        <activity android:name="brokerscirlce.com.Activities.Chat.Call_Screen_Activity"
+        <activity android:name="brokerscircle.com.Activities.Chat.Call_Screen_Activity"
             android:screenOrientation="portrait" />
-        <activity android:name="brokerscirlce.com.Activities.FollowersSuggestionActivity"
+        <activity android:name="brokerscircle.com.Activities.FollowersSuggestionActivity"
             android:screenOrientation="portrait" />
-        <activity android:name="brokerscirlce.com.Activities.SettingActivity"
+        <activity android:name="brokerscircle.com.Activities.SettingActivity"
             android:screenOrientation="portrait" />
-        <activity android:name="brokerscirlce.com.Activities.Properties.PropertyDetailActivity"
+        <activity android:name="brokerscircle.com.Activities.Properties.PropertyDetailActivity"
             android:screenOrientation="portrait" /> <!-- <meta-data -->
         <!-- android:name="asset_statements" -->
         <!-- android:resource="@string/asset_statements" /> -->
-        <activity android:name="brokerscirlce.com.Activities.FavoriteActivity"
+        <activity android:name="brokerscircle.com.Activities.FavoriteActivity"
             android:screenOrientation="portrait" />
-        <activity android:name="brokerscirlce.com.Activities.ProfileFollowersActivity"
+        <activity android:name="brokerscircle.com.Activities.ProfileFollowersActivity"
             android:screenOrientation="portrait" />
-        <activity android:name="brokerscirlce.com.Activities.MapDisplayActivity"
+        <activity android:name="brokerscircle.com.Activities.MapDisplayActivity"
             android:screenOrientation="portrait" />
-        <activity android:name="brokerscirlce.com.Activities.Chat.ChatDetailActivity"
+        <activity android:name="brokerscircle.com.Activities.Chat.ChatDetailActivity"
             android:screenOrientation="portrait" />
-        <activity android:name="brokerscirlce.com.Activities.Brokers.CreateBrokerAndOwner"
+        <activity android:name="brokerscircle.com.Activities.Brokers.CreateBrokerAndOwner"
             android:screenOrientation="portrait" />
-        <activity android:name="brokerscirlce.com.Activities.CreateNewsActivity"
+        <activity android:name="brokerscircle.com.Activities.CreateNewsActivity"
             android:screenOrientation="portrait" />
-        <activity android:name="brokerscirlce.com.Activities.JobBroard.CreateJobsActivity"
+        <activity android:name="brokerscircle.com.Activities.JobBroard.CreateJobsActivity"
             android:screenOrientation="portrait" />
-        <activity android:name="brokerscirlce.com.Activities.Projects.CreateProjectActivity"
+        <activity android:name="brokerscircle.com.Activities.Projects.CreateProjectActivity"
             android:screenOrientation="portrait" />
-        <activity android:name="brokerscirlce.com.Activities.Developers.CreateDeveloperActivity"
+        <activity android:name="brokerscircle.com.Activities.Developers.CreateDeveloperActivity"
             android:screenOrientation="portrait" />
-        <activity android:name="brokerscirlce.com.Activities.Estates.CreateEstateActivity"
+        <activity android:name="brokerscircle.com.Activities.Estates.CreateEstateActivity"
             android:screenOrientation="portrait" />
-        <activity android:name="brokerscirlce.com.Activities.CreateActivity"
+        <activity android:name="brokerscircle.com.Activities.CreateActivity"
             android:screenOrientation="portrait" />
-        <activity android:name="brokerscirlce.com.Activities.MapDetailActivity"
+        <activity android:name="brokerscircle.com.Activities.MapDetailActivity"
             android:screenOrientation="portrait" />
-        <activity android:name="brokerscirlce.com.Activities.MapActivity"
+        <activity android:name="brokerscircle.com.Activities.MapActivity"
             android:screenOrientation="portrait" />
-        <activity android:name="brokerscirlce.com.Activities.Projects.ViewAllProjectsActivity"
+        <activity android:name="brokerscircle.com.Activities.Projects.ViewAllProjectsActivity"
             android:screenOrientation="portrait" />
-        <activity android:name="brokerscirlce.com.Activities.SearchActivity" />
-        <activity android:name="brokerscirlce.com.Activities.Properties.ListPropertyOptions"
+        <activity android:name="brokerscircle.com.Activities.SearchActivity" />
+        <activity android:name="brokerscircle.com.Activities.Properties.ListPropertyOptions"
             android:screenOrientation="portrait" />
-        <activity android:name="brokerscirlce.com.Activities.Chat.ChatActivity"
+        <activity android:name="brokerscircle.com.Activities.Chat.ChatActivity"
             android:screenOrientation="portrait" />
-        <activity android:name="brokerscirlce.com.Activities.UsersActivity"
+        <activity android:name="brokerscircle.com.Activities.UsersActivity"
             android:screenOrientation="portrait" />
-        <activity android:name="brokerscirlce.com.Activities.Estates.ViewAllOwnersEstateActivity"
+        <activity android:name="brokerscircle.com.Activities.Estates.ViewAllOwnersEstateActivity"
             android:screenOrientation="portrait" />
-        <activity android:name="brokerscirlce.com.Activities.Developers.ViewAllDevelopersActivity"
+        <activity android:name="brokerscircle.com.Activities.Developers.ViewAllDevelopersActivity"
             android:screenOrientation="portrait" />
-        <activity android:name="brokerscirlce.com.Activities.Properties.ViewAllPropertiesActivity"
+        <activity android:name="brokerscircle.com.Activities.Properties.ViewAllPropertiesActivity"
             android:screenOrientation="portrait" />
-        <activity android:name="brokerscirlce.com.Activities.Developers.DevelopersDetailActivity"
+        <activity android:name="brokerscircle.com.Activities.Developers.DevelopersDetailActivity"
             android:screenOrientation="portrait" />
-        <activity android:name="brokerscirlce.com.Activities.Estates.ViewAllEstateActivity"
+        <activity android:name="brokerscircle.com.Activities.Estates.ViewAllEstateActivity"
             android:screenOrientation="portrait" />
-        <activity android:name="brokerscirlce.com.Activities.Brokers.ViewAllBrokersActivity"
+        <activity android:name="brokerscircle.com.Activities.Brokers.ViewAllBrokersActivity"
             android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
             </intent-filter>
         </activity>
-        <activity android:name="brokerscirlce.com.Activities.Estates.EstateDetailActivity"
+        <activity android:name="brokerscircle.com.Activities.Estates.EstateDetailActivity"
             android:screenOrientation="portrait" />
-        <activity android:name="brokerscirlce.com.Activities.Brokers.BrokerProfileActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="brokerscirlce.com.Activities.AppIntro.IntroActivity"
+        <activity android:name="brokerscircle.com.Activities.Brokers.BrokerProfileActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="brokerscirlce.com.Activities.DashboardActivity"
+            android:name="brokerscircle.com.Activities.AppIntro.IntroActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="brokerscircle.com.Activities.DashboardActivity"
             android:label="@string/title_activity_dashboard"
             android:screenOrientation="portrait" />
         <activity
-            android:name="brokerscirlce.com.Activities.InviteUserActivity"
+            android:name="brokerscircle.com.Activities.InviteUserActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="brokerscirlce.com.Activities.ForgotPasswordCodeActivity"
+            android:name="brokerscircle.com.Activities.ForgotPasswordCodeActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="brokerscirlce.com.Activities.ForgotPasswordActivity"
+            android:name="brokerscircle.com.Activities.ForgotPasswordActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="brokerscirlce.com.Activities.LoginActivity"
+            android:name="brokerscircle.com.Activities.LoginActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="brokerscirlce.com.Activities.SignUpStepOneActivity"
+            android:name="brokerscircle.com.Activities.SignUpStepOneActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="brokerscirlce.com.Activities.MainActivity"
+            android:name="brokerscircle.com.Activities.MainActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="brokerscirlce.com.Activities.SplashActivity"
+            android:name="brokerscircle.com.Activities.SplashActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -157,7 +157,7 @@
             android:value="@string/google_maps_key" />
 
         <receiver
-            android:name="brokerscirlce.com.receivers.ConnectivityReceiver"
+            android:name="brokerscircle.com.receivers.ConnectivityReceiver"
             android:enabled="true">
             <intent-filter>
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />

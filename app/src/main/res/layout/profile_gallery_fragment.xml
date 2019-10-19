@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:background="@color/colorWhite"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="brokerscirlce.com.fragments.TabsFragments.ProfileTabs.ProfileGalleryTabFragment">
+    tools:context="brokerscircle.com.fragments.TabsFragments.ProfileTabs.ProfileGalleryTabFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview"

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="brokerscirlce.com.fragments.TabsFragments.FavoriteTabs.FavoriteBrokerFragment">
+    tools:context="brokerscircle.com.fragments.TabsFragments.FavoriteTabs.FavoriteBrokerFragment">
 
     <com.facebook.shimmer.ShimmerFrameLayout
         android:id="@+id/shimmer_view_container"

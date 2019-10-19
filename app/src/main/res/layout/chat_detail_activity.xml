@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:id="@+id/rootView"
     android:orientation="vertical"
-    tools:context="brokerscirlce.com.Activities.Chat.ChatDetailActivity">
+    tools:context="brokerscircle.com.Activities.Chat.ChatDetailActivity">
 
     <LinearLayout
         android:weightSum="1.0"

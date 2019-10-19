@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@mipmap/cloud"
     android:backgroundTintMode="multiply"
-    tools:context="brokerscirlce.com.Activities.SplashActivity">
+    tools:context="brokerscircle.com.Activities.SplashActivity">
 
     <ImageView
         android:alpha="0.5"

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@mipmap/searchbg"
     android:orientation="vertical"
-    tools:context="brokerscirlce.com.Activities.SearchActivity">
+    tools:context="brokerscircle.com.Activities.SearchActivity">
 
     <LinearLayout
         android:weightSum="1.0"

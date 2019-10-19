@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:id="@+id/dashboard_content_two"
     android:background="@color/colorWhite"
-    tools:context="brokerscirlce.com.Activities.DashboardActivity">
+    tools:context="brokerscircle.com.Activities.DashboardActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
